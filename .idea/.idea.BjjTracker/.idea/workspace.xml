@@ -19,9 +19,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1779c8-03b1-47be-a624-cb58d1e7e610" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Class/ClassDateConflictException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/ClassController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/ClassController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/Class/RegisterClassModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Class/RegisterClassModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -349,7 +347,7 @@
       <workItem from="1776804275854" duration="3954000" />
       <workItem from="1776976907125" duration="1991000" />
       <workItem from="1777395358622" duration="138000" />
-      <workItem from="1777395626777" duration="3299000" />
+      <workItem from="1777395626777" duration="3825000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with domain, application, and infrastructure layers">
       <option name="closed" value="true" />
@@ -359,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777396246134</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implement error handling in ClassController and add ClassDateConflictException">
+      <option name="closed" value="true" />
+      <created>1777398955475</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1777398955475</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +387,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Add initial project structure with domain, application, and infrastructure layers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add initial project structure with domain, application, and infrastructure layers" />
+    <MESSAGE value="Implement error handling in ClassController and add ClassDateConflictException" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement error handling in ClassController and add ClassDateConflictException" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
