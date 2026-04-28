@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using BjjTracker.Application.Class.Commands.Actions;
+using BjjTracker.Domain.Exceptions.Class;
 
 namespace BjjTracker.Api.Models.Class;
 
@@ -30,7 +31,7 @@ public class RegisterClassModel
 	{
 		if  (BeginDate > EndDate || BeginDate < DateTime.Today || EndDate < DateTime.Today)
 		{
-			throw new ValidationException();
+			throw new ClassNotFoundException("BeginDate must be before EndDate and both dates must be in the future.");
 		}
 
 	}

@@ -19,105 +19,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1779c8-03b1-47be-a624-cb58d1e7e610" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/BjjTracker.Api.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/ClassController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/UserController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ApplicationBuilderExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Authentication/UserLoginViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Authentication/UserRegisterViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Class/GetClassByIdModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Class/RegisterClassModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Class/SearchClassesModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/GetSchoolByDocumentModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/GetSchoolByIdModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/RegisterSchoolModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/SearchSchoolsModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/GetStudentByIdModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/SearchStudentsModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/UpdateStudentNameModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/UpdateStudentSchoolIdModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/GetTeacherByIdModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/GetTeachersModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/GraduateStudentModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/UpdateTeacherNameModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Queries/Dtos/AttendanceRequestDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Authentication/IJwtAuthenticationHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Authentication/JwtAuthenticationHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/BjjTracker.Application.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Commands/Actions/RegisterClassCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Commands/ClassCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Commands/IClassCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Queries/ClassQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Queries/Dtos/ClassDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Queries/Filters/GetClassByIdFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Queries/Filters/SearchClassesFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Queries/IClassQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Common/Dtos/BaseUserDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Common/Dtos/PagedResponseDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/Actions/RegisterSchoolCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/ISchoolCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/SchoolCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/Dtos/SchoolDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/Filters/GetSchoolByDocumentFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/Filters/GetSchoolByIdFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/Filters/SearchSchoolsFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/ISchoolQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/SchoolQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Commands/Actions/UpdateStudentNameCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Commands/Actions/UpdateStudentSchoolIdCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Commands/IStudentCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Commands/StudentCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Queries/Dtos/StudentDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Queries/Filters/GetStudentByIdFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Queries/Filters/SearchStudentsFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Queries/IStudentQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Queries/StudentQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/Actions/GraduateStudentCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/Actions/UpdateTeacherNameCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/ITeacherCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/TeacherCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/Dtos/TeacherDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/Filters/GetTeacherFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/Filters/TeacherSearchFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/ITeacherQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/TeacherQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/User/Commands/Actions/LoginUserCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/User/Commands/Actions/RegisterUserCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/User/Commands/UserCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/AttendanceRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/Class.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/School.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/Student.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/Teacher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Enums/BeltColors.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Enums/Roles.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Class/ClassNotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/School/IsNotFromTheSameSchoolException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/School/SchoolExistsException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/School/SchoolNotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/User/RoleNotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/User/ThisEmailAlreadyExistsException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/User/UserNotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Helpers/PasswordHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Interfaces/IClassRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Interfaces/ISchoolRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Interfaces/IStudentRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Interfaces/ITeacherRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Interfaces/IUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/BjjTrackerDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/ClassRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/SchoolRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/StudentRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/TeacherRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/UserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Class/ClassDateConflictException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/ClassController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/ClassController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/Class/RegisterClassModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Class/RegisterClassModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +47,11 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -215,6 +124,7 @@
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Entities/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Enums/BeltColors.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Enums/Roles.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Class/ClassDateConflictException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Class/ClassNotFoundException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/School/IsNotFromTheSameSchoolException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/School/SchoolExistsException.cs" root0="FORCE_HIGHLIGHTING" />
@@ -246,36 +156,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.BjjTracker_Api: https.executor&quot;: &quot;Run&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Docker.compose.yaml: Compose Deployment.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.BjjTracker_Api: https.executor": "Run",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Docker.compose.yaml: Compose Deployment.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "dev",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;,
-      &quot;sqlserver.localdb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql",
+      "sqlserver.localdb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.BjjTracker_Api: https">
     <configuration name="BjjTracker.Infrastructure" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -439,8 +349,17 @@
       <workItem from="1776804275854" duration="3954000" />
       <workItem from="1776976907125" duration="1991000" />
       <workItem from="1777395358622" duration="138000" />
-      <workItem from="1777395626777" duration="328000" />
+      <workItem from="1777395626777" duration="3299000" />
     </task>
+    <task id="LOCAL-00001" summary="Add initial project structure with domain, application, and infrastructure layers">
+      <option name="closed" value="true" />
+      <created>1777396246134</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1777396246134</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,6 +380,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Add initial project structure with domain, application, and infrastructure layers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add initial project structure with domain, application, and infrastructure layers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
