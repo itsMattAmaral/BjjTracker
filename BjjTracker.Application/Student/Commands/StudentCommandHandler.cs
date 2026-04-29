@@ -28,10 +28,10 @@ public class StudentCommandHandler(
 
 	public async Task Handle(UpdateStudentSchoolIdCommand request, CancellationToken cancellationToken)
 	{
-		var student = await _studentRepository.GetByIdAsync(request.Id, cancellationToken);
+		var student = await _studentRepository.GetByIdAsync(request.StudentId, cancellationToken);
 		if (student == null)
 		{
-			throw new UserNotFoundException(request.Id);
+			throw new UserNotFoundException(request.StudentId);
 		}
 		var school = await _schoolRepository.GetByIdAsync(request.SchoolId, cancellationToken);
 		if (school is null) 

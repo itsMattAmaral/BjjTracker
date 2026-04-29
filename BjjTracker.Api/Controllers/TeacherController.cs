@@ -1,6 +1,8 @@
 using BjjTracker.Api.Models.Teacher;
 using BjjTracker.Application.Common.Dtos;
 using BjjTracker.Application.Teacher.Queries.Dtos;
+using BjjTracker.Domain.Exceptions.School;
+using BjjTracker.Domain.Exceptions.User;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,29 +21,43 @@ public class TeacherController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
 	public async Task<ActionResult<PagedResponseDto<TeacherDto>>> SearchTeachers(
-		[FromQuery] int page = 1,
-		[FromQuery] int pageSize = 10,
-		[FromQuery] string? searchTerm = null,
-		[FromQuery] string? sortBy = null,
-		[FromQuery] bool sortDescending = false,
+		SearchTeachersModel model,
 		CancellationToken cancellationToken = default)
 	{
-		var model = new GetTeachersModel(page, pageSize, searchTerm, sortBy, sortDescending);
 		var filter = model.GetFilter();
-		var result = await _mediator.Send(filter, cancellationToken);
-		return Ok(result);
+
+		try
+		{
+			var result = await _mediator.Send(filter, cancellationToken);
+			return Ok(result);
+		}
+		catch (Exception ex)
+		{
+			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+		}
 	}
 	
 	[HttpGet("{teacherId:int}")]
 	[ProducesResponseType(typeof(TeacherDto) ,StatusCodes.Status200OK)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<ActionResult<TeacherDto>> GetTeacherById([FromRoute] int teacherId)
+	public async Task<ActionResult<TeacherDto>> GetTeacherById(GetTeacherByIdModel model)
 	{
-		var model = new GetTeacherByIdModel { TeacherId = teacherId };
 		var filter = model.GetFilter();
-		var result = await _mediator.Send(filter);
-		return Ok(result);
+
+		try
+		{
+			var result = await _mediator.Send(filter);
+			return Ok(result);
+		}
+		catch (UserNotFoundException ex)
+		{
+			return NotFound(ex.Message);
+		}
+		catch (Exception ex)
+		{
+			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+		}
 	}
 	
 	
@@ -50,12 +66,23 @@ public class TeacherController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<IActionResult> UpdateTeacherName([FromRoute]int teacherId,[FromBody]UpdateTeacherNameModel model)
+	public async Task<IActionResult> UpdateTeacherName(UpdateTeacherNameModel model)
 	{
 		ArgumentNullException.ThrowIfNull(model);
-		var command = model.GetCommand(teacherId);
-		await _mediator.Send(command);
-		return NoContent();
+		var command = model.GetCommand();
+		try
+		{
+			await _mediator.Send(command);
+			return NoContent();
+		}
+		catch (UserNotFoundException ex)
+		{
+			return NotFound(ex.Message);
+		}
+		catch (Exception ex)
+		{
+			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+		}
 	}
 	
 	[HttpPost("{teacherId:int}/graduateStudent")]
@@ -63,12 +90,28 @@ public class TeacherController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<IActionResult> GraduateStudent([FromBody]GraduateStudentModel model, int teacherId)
+	public async Task<IActionResult> GraduateStudent(GraduateStudentModel model)
 	{
 		ArgumentNullException.ThrowIfNull(model);
-		var command = model.GetCommand(teacherId);
-		await _mediator.Send(command);
-		return NoContent();
+		var command = model.GetCommand();
+
+		try
+		{
+			await _mediator.Send(command);
+			return NoContent();
+		}
+		catch (UserNotFoundException ex)
+		{
+			return NotFound(ex.Message);
+		}
+		catch (IsNotFromTheSameSchoolException ex)
+		{
+			return BadRequest(ex.Message);
+		}
+		catch (Exception ex)
+		{
+			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+		}
 	}
 	
 }

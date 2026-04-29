@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using BjjTracker.Api.Models.Student;
 using BjjTracker.Application.Common.Dtos;
 using BjjTracker.Application.Student.Queries.Dtos;
+using BjjTracker.Domain.Exceptions.School;
+using BjjTracker.Domain.Exceptions.User;
 
 namespace BjjTracker.Api.Controllers;
 
@@ -20,29 +22,45 @@ public class StudentController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
 	public async Task<ActionResult<PagedResponseDto<StudentDto>>> SearchStudents(
-		[FromQuery] int page = 1,
-		[FromQuery] int pageSize = 10,
-		[FromQuery] string? searchTerm = null,
-		[FromQuery] string? sortBy = null,
-		[FromQuery] bool sortDescending = false,
+		SearchStudentsModel model,
 		CancellationToken cancellationToken = default)
 	{
-		var model = new SearchStudentsModel(page, pageSize, searchTerm, sortBy, sortDescending);
 		var query = model.GetFilter();
-		var result = await _mediator.Send(query, cancellationToken);
-		return Ok(result);
+
+		try
+		{
+			var result = await _mediator.Send(query, cancellationToken);
+			return Ok(result);
+		}
+		catch (Exception ex)
+		{
+			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+		}
+
 	}
 	
 	[HttpGet("{studentId:int}")]
 	[ProducesResponseType(StatusCodes.Status200OK)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<ActionResult<StudentDto>> GetStudentById([FromRoute] int studentId, CancellationToken cancellationToken)
+	public async Task<ActionResult<StudentDto>> GetStudentById(GetStudentByIdModel model, CancellationToken cancellationToken)
 	{
-		var model = new GetStudentByIdModel { Id = studentId };
 		var query = model.GetFilter();
-		var result = await _mediator.Send(query, cancellationToken);
-		return Ok(result);
+
+		try
+		{
+			var result = await _mediator.Send(query, cancellationToken);
+			return Ok(result);
+		}
+		catch (UserNotFoundException ex)
+		{
+			return NotFound(ex.Message);
+		}
+		catch (Exception ex)
+		{
+			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+		}
+
 	}
 	
 	[HttpPatch("{studentId:int}/school")]
@@ -50,11 +68,27 @@ public class StudentController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<IActionResult> UpdateStudentSchoolId(int studentId, [FromBody] UpdateStudentSchoolIdModel model)
+	public async Task<IActionResult> UpdateStudentSchoolId(UpdateStudentSchoolIdModel model)
 	{
-		var command = model.GetCommand(studentId);
-		await _mediator.Send(command);
-		return NoContent();
+		var command = model.GetCommand();
+
+		try
+		{
+			await _mediator.Send(command);
+			return NoContent();
+		}		
+		catch (UserNotFoundException ex)
+		{
+			return NotFound(ex.Message);
+		}
+		catch (SchoolNotFoundException ex)
+		{
+			return NotFound(ex.Message);
+		}
+		catch (Exception ex)
+		{
+			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+		}
 	}
 	
 	[HttpPatch("{studentId:int}/name")]
@@ -62,10 +96,22 @@ public class StudentController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<IActionResult> UpdateStudentNameId(int studentId, [FromBody] UpdateStudentNameModel model)
+	public async Task<IActionResult> UpdateStudentNameId(UpdateStudentNameModel model)
 	{
-		var command = model.GetCommand(studentId);
-		await _mediator.Send(command);
-		return NoContent();
+		var command = model.GetCommand();
+
+		try
+		{
+			await _mediator.Send(command);
+			return NoContent();
+		}
+		catch (UserNotFoundException ex)
+		{
+			return NotFound(ex.Message);
+		}
+		catch (Exception ex)
+		{
+			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+		}
 	}
 }

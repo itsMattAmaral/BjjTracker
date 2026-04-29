@@ -32,7 +32,7 @@ public class SchoolController(IMediator mediator) : ControllerBase
 		}
 		catch (Exception ex)
 		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex);
+			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
 		}
 	}
 	
@@ -49,13 +49,13 @@ public class SchoolController(IMediator mediator) : ControllerBase
 			var result = await _mediator.Send(query, cancellationToken);
 			return Ok(result);
 		}
-		catch (SchoolNotFoundException)
+		catch (SchoolNotFoundException ex)
 		{
-			return NotFound();
+			return NotFound(ex.Message);
 		}
 		catch (Exception ex)
 		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex);
+			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
 		}
 	}
 	
@@ -72,13 +72,13 @@ public class SchoolController(IMediator mediator) : ControllerBase
 			var result = await _mediator.Send(query, cancellationToken);
 			return Ok(result);
 		}
-		catch (SchoolNotFoundException)
+		catch (SchoolNotFoundException ex)
 		{
-			return NotFound();
+			return NotFound(ex.Message);
 		}
 		catch (Exception ex)
 		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex);
+			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
 		}
 
 	}
@@ -101,7 +101,7 @@ public class SchoolController(IMediator mediator) : ControllerBase
 		}
 		catch (Exception ex)
 		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex);
+			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
 		}
 	}
 }
