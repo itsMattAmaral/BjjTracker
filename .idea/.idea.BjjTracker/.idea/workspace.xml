@@ -19,7 +19,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1779c8-03b1-47be-a624-cb58d1e7e610" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/UpdateStudentNameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/UpdateStudentNameModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/UpdateStudentSchoolIdModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/UpdateStudentSchoolIdModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/GraduateStudentModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/GraduateStudentModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/UpdateTeacherNameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/UpdateTeacherNameModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -349,6 +354,7 @@
       <workItem from="1777395358622" duration="138000" />
       <workItem from="1777395626777" duration="5423000" />
       <workItem from="1777466016084" duration="2947000" />
+      <workItem from="1777749632676" duration="1114000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with domain, application, and infrastructure layers">
       <option name="closed" value="true" />
@@ -382,7 +388,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777468049217</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix logic in TeacherCommandHandler to throw exception for mismatched school entities">
+      <option name="closed" value="true" />
+      <created>1777749804664</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1777749804664</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +421,8 @@
     <MESSAGE value="Implement error handling in ClassController and add ClassDateConflictException" />
     <MESSAGE value="Implement error handling in SchoolController and add specific exceptions" />
     <MESSAGE value="Refactor error handling in controllers to return exception messages and update model properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor error handling in controllers to return exception messages and update model properties" />
+    <MESSAGE value="Fix logic in TeacherCommandHandler to throw exception for mismatched school entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix logic in TeacherCommandHandler to throw exception for mismatched school entities" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

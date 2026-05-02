@@ -68,9 +68,9 @@ public class StudentController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<IActionResult> UpdateStudentSchoolId(UpdateStudentSchoolIdModel model)
+	public async Task<IActionResult> UpdateStudentSchoolId([FromRoute]int studentId, [FromBody]UpdateStudentSchoolIdModel model)
 	{
-		var command = model.GetCommand();
+		var command = model.GetCommand(studentId);
 
 		try
 		{
@@ -96,9 +96,9 @@ public class StudentController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<IActionResult> UpdateStudentNameId(UpdateStudentNameModel model)
+	public async Task<IActionResult> UpdateStudentNameId([FromRoute]int studentId, [FromBody]UpdateStudentNameModel model)
 	{
-		var command = model.GetCommand();
+		var command = model.GetCommand(studentId);
 
 		try
 		{
