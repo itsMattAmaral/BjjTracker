@@ -34,7 +34,7 @@ public class TeacherCommandHandler(ITeacherRepository teacherRepository, IStuden
 		
 		var bothEntitiesHasSchool = teacher.School != null && student.School != null;
 
-		if (bothEntitiesHasSchool)
+		if (!bothEntitiesHasSchool)
 			throw new IsNotFromTheSameSchoolException();
 		
 		teacher.GraduateStudent(student);
