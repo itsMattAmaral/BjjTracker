@@ -68,7 +68,7 @@ public class ClassController(IMediator mediator) : ControllerBase
 		try
 		{
 			await _mediator.Send(command, cancellationToken);
-			return Ok();
+			return Created();
 		}
 		catch (ClassDateConflictException ex)
 		{
