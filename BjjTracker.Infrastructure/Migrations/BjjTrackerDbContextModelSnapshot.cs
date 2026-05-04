@@ -37,7 +37,7 @@ namespace BjjTracker.Infrastructure.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("AttendanceRequest");
+                    b.ToTable("AttendanceRequests", (string)null);
                 });
 
             modelBuilder.Entity("BjjTracker.Domain.Entities.Class", b =>
@@ -76,7 +76,7 @@ namespace BjjTracker.Infrastructure.Migrations
 
                     b.HasIndex("TeacherId");
 
-                    b.ToTable("Classes");
+                    b.ToTable("Classes", (string)null);
                 });
 
             modelBuilder.Entity("BjjTracker.Domain.Entities.School", b =>
@@ -121,7 +121,7 @@ namespace BjjTracker.Infrastructure.Migrations
                     b.HasIndex("Document")
                         .IsUnique();
 
-                    b.ToTable("Schools");
+                    b.ToTable("Schools", (string)null);
                 });
 
             modelBuilder.Entity("BjjTracker.Domain.Entities.User", b =>
@@ -178,7 +178,7 @@ namespace BjjTracker.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
 
                     b.HasDiscriminator<int>("Role");
 
@@ -194,6 +194,8 @@ namespace BjjTracker.Infrastructure.Migrations
 
                     b.HasIndex("SchoolId");
 
+                    b.ToTable("Users", (string)null);
+
                     b.HasDiscriminator().HasValue(1);
                 });
 
@@ -205,6 +207,8 @@ namespace BjjTracker.Infrastructure.Migrations
                         .HasColumnType("boolean");
 
                     b.HasIndex("SchoolId");
+
+                    b.ToTable("Users", (string)null);
 
                     b.HasDiscriminator().HasValue(0);
                 });

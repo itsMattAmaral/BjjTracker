@@ -19,8 +19,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1779c8-03b1-47be-a624-cb58d1e7e610" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/AttendanceRequestMap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/ClassMap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/SchoolMap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/StudentMap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/TeacherMap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/UserMap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/dataSources/data_sources_history.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/TeacherCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/TeacherCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/BjjTrackerDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/BjjTrackerDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Migrations/BjjTrackerDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Migrations/BjjTrackerDbContextModelSnapshot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +144,12 @@
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Interfaces/IStudentRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Interfaces/ITeacherRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Interfaces/IUserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/AttendanceRequestMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/ClassMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/SchoolMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/StudentMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/TeacherMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/UserMap.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/ClassRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/SchoolRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/StudentRepository.cs" root0="FORCE_HIGHLIGHTING" />
@@ -359,7 +373,7 @@
       <workItem from="1777466016084" duration="2947000" />
       <workItem from="1777749632676" duration="1114000" />
       <workItem from="1777750939412" duration="3698000" />
-      <workItem from="1777894455809" duration="2210000" />
+      <workItem from="1777894455809" duration="5189000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with domain, application, and infrastructure layers">
       <option name="closed" value="true" />
@@ -409,7 +423,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777896245875</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactor TeacherCommandHandler to check school IDs for entity validation">
+      <option name="closed" value="true" />
+      <created>1777896807697</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1777896807697</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Improve error messages in TeacherCommandHandler for user not found exceptions">
+      <option name="closed" value="true" />
+      <created>1777897659783</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1777897659783</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +466,9 @@
     <MESSAGE value="Refactor error handling in controllers to return exception messages and update model properties" />
     <MESSAGE value="Fix logic in TeacherCommandHandler to throw exception for mismatched school entities" />
     <MESSAGE value="Refactor ClassRepository to apply search term using a dedicated method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor ClassRepository to apply search term using a dedicated method" />
+    <MESSAGE value="Refactor TeacherCommandHandler to check school IDs for entity validation" />
+    <MESSAGE value="Improve error messages in TeacherCommandHandler for user not found exceptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve error messages in TeacherCommandHandler for user not found exceptions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -465,19 +497,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/TeacherCommandHandler.cs</url>
-          <line>31</line>
-          <properties documentPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/TeacherCommandHandler.cs" containingFunctionPresentation="Method 'Handle'">
-            <startOffsets>
-              <option value="1541" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1561" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
