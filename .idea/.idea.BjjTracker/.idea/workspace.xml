@@ -20,7 +20,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8b1779c8-03b1-47be-a624-cb58d1e7e610" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/ClassRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/ClassRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/TeacherCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/TeacherCommandHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,36 +162,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.BjjTracker_Api: https.executor&quot;: &quot;Run&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Docker.compose.yaml: Compose Deployment.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.BjjTracker_Api: https.executor": "Debug",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Docker.compose.yaml: Compose Deployment.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "dev",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;,
-      &quot;sqlserver.localdb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql",
+      "sqlserver.localdb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.BjjTracker_Api: https">
     <configuration name="BjjTracker.Infrastructure" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -359,7 +359,7 @@
       <workItem from="1777466016084" duration="2947000" />
       <workItem from="1777749632676" duration="1114000" />
       <workItem from="1777750939412" duration="3698000" />
-      <workItem from="1777894455809" duration="1528000" />
+      <workItem from="1777894455809" duration="2210000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with domain, application, and infrastructure layers">
       <option name="closed" value="true" />
@@ -401,7 +401,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777749804664</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactor ClassRepository to apply search term using a dedicated method">
+      <option name="closed" value="true" />
+      <created>1777896245875</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1777896245875</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,7 +435,8 @@
     <MESSAGE value="Implement error handling in SchoolController and add specific exceptions" />
     <MESSAGE value="Refactor error handling in controllers to return exception messages and update model properties" />
     <MESSAGE value="Fix logic in TeacherCommandHandler to throw exception for mismatched school entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix logic in TeacherCommandHandler to throw exception for mismatched school entities" />
+    <MESSAGE value="Refactor ClassRepository to apply search term using a dedicated method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor ClassRepository to apply search term using a dedicated method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -456,6 +465,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/TeacherCommandHandler.cs</url>
+          <line>31</line>
+          <properties documentPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/TeacherCommandHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="1541" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1561" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

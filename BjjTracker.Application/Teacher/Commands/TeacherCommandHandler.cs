@@ -32,7 +32,7 @@ public class TeacherCommandHandler(ITeacherRepository teacherRepository, IStuden
 		if (teacher == null) 
 			throw new UserNotFoundException(request.TeacherId);
 		
-		var bothEntitiesHasSchool = teacher.School != null && student.School != null;
+		var bothEntitiesHasSchool = teacher.SchoolId != null && student.SchoolId != null && teacher.SchoolId == student.SchoolId; 
 
 		if (!bothEntitiesHasSchool)
 			throw new IsNotFromTheSameSchoolException();
