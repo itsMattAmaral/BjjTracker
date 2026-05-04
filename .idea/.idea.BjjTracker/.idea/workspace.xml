@@ -19,12 +19,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1779c8-03b1-47be-a624-cb58d1e7e610" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/UpdateStudentNameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/UpdateStudentNameModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/UpdateStudentSchoolIdModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/UpdateStudentSchoolIdModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/GraduateStudentModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/GraduateStudentModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/UpdateTeacherNameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/UpdateTeacherNameModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/ClassRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/ClassRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,13 +142,20 @@
     <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/TeacherRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="HttpClientEndpointsTabState">
+    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;6cdb20f9180a6c6d5a3703a046abc1b0fc7a78dc&quot; value=&quot;###&amp;#10;GET http://localhost:5111/Class&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
+  </component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: true
 }</component>
   <component name="ProjectId" id="39AqBfN00sR0Fq9khRxJyFjGKiV" />
   <component name="ProjectViewState">
@@ -355,6 +358,8 @@
       <workItem from="1777395626777" duration="5423000" />
       <workItem from="1777466016084" duration="2947000" />
       <workItem from="1777749632676" duration="1114000" />
+      <workItem from="1777750939412" duration="3698000" />
+      <workItem from="1777894455809" duration="1528000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with domain, application, and infrastructure layers">
       <option name="closed" value="true" />
