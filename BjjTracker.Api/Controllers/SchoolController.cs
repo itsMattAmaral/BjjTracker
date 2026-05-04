@@ -40,8 +40,9 @@ public class SchoolController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status200OK)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<ActionResult<SchoolDto>> GetSchoolById(GetSchoolByIdModel model, CancellationToken cancellationToken)
+	public async Task<ActionResult<SchoolDto>> GetSchoolById([FromRoute] int schoolId, CancellationToken cancellationToken)
 	{
+		var model = new GetSchoolByIdModel { SchoolId = schoolId };
 		var query = model.GetFilter();
 
 		try
@@ -63,8 +64,9 @@ public class SchoolController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status200OK)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<ActionResult<SchoolDto>> GetSchoolById(GetSchoolByDocumentModel model, CancellationToken cancellationToken)
+	public async Task<ActionResult<SchoolDto>> GetSchoolByDocument(string schoolDocument, CancellationToken cancellationToken)
 	{
+		var model = new  GetSchoolByDocumentModel { SchoolDocument = schoolDocument };
 		var query = model.GetFilter();
 
 		try

@@ -7,11 +7,11 @@ namespace BjjTracker.Api.Models.Student;
 public class GetStudentByIdModel
 {
 	[Required]
-	[FromRoute]
 	[Range(1, int.MaxValue,  ErrorMessage = "StudentId must be greater than 0")]
-	public int StudentId { get; set; }
+	public int StudentId { get; init; }
 	public GetStudentByIdFilter GetFilter()
 	{
+		ArgumentOutOfRangeException.ThrowIfNegativeOrZero(StudentId);
         return new GetStudentByIdFilter
 		{
 			StudentId = StudentId

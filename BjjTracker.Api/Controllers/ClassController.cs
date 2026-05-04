@@ -32,12 +32,13 @@ public class ClassController(IMediator mediator) : ControllerBase
 		}
 	}
 	
-	[HttpGet("{ClassId:int}")]
+	[HttpGet("{classId:int}")]
 	[ProducesResponseType(StatusCodes.Status200OK)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<ActionResult<ClassDto>> GetSchoolById(GetClassByIdModel model, CancellationToken cancellationToken)
+	public async Task<ActionResult<ClassDto>> GetSchoolById([FromRoute]int classId, CancellationToken cancellationToken)
 	{
+		var model = new GetClassByIdModel{ ClassId = classId };
 		var query = model.GetFilter();
 
 		try

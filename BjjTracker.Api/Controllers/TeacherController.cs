@@ -41,13 +41,14 @@ public class TeacherController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(typeof(TeacherDto) ,StatusCodes.Status200OK)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<ActionResult<TeacherDto>> GetTeacherById(GetTeacherByIdModel model)
+	public async Task<ActionResult<TeacherDto>> GetTeacherById([FromRoute] int teacherId, CancellationToken cancellationToken = default)
 	{
+		var model = new GetTeacherByIdModel {  TeacherId = teacherId };
 		var filter = model.GetFilter();
 
 		try
 		{
-			var result = await _mediator.Send(filter);
+			var result = await _mediator.Send(filter, cancellationToken);
 			return Ok(result);
 		}
 		catch (UserNotFoundException ex)
@@ -66,13 +67,13 @@ public class TeacherController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<IActionResult> UpdateTeacherName([FromRoute]int teacherId, [FromBody]UpdateTeacherNameModel model)
+	public async Task<IActionResult> UpdateTeacherName([FromRoute]int teacherId, [FromBody]UpdateTeacherNameModel model, CancellationToken cancellationToken = default)
 	{
 		ArgumentNullException.ThrowIfNull(model);
 		var command = model.GetCommand(teacherId);
 		try
 		{
-			await _mediator.Send(command);
+			await _mediator.Send(command, cancellationToken);
 			return NoContent();
 		}
 		catch (UserNotFoundException ex)
@@ -90,14 +91,14 @@ public class TeacherController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<IActionResult> GraduateStudent([FromRoute]int teacherId, [FromBody]GraduateStudentModel model)
+	public async Task<IActionResult> GraduateStudent([FromRoute]int teacherId, [FromBody]GraduateStudentModel model, CancellationToken cancellationToken = default)
 	{
 		ArgumentNullException.ThrowIfNull(model);
 		var command = model.GetCommand(teacherId);
 
 		try
 		{
-			await _mediator.Send(command);
+			await _mediator.Send(command, cancellationToken);
 			return NoContent();
 		}
 		catch (UserNotFoundException ex)

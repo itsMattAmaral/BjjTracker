@@ -19,16 +19,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1779c8-03b1-47be-a624-cb58d1e7e610" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/AttendanceRequestMap.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/ClassMap.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/SchoolMap.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/StudentMap.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/TeacherMap.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/UserMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/dataSources/data_sources_history.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/BjjTrackerDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/BjjTrackerDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Migrations/BjjTrackerDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Migrations/BjjTrackerDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/School/GetSchoolByDocumentModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/GetSchoolByDocumentModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/School/GetSchoolByIdModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/GetSchoolByIdModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/GetStudentByIdModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/GetStudentByIdModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/GetTeacherByIdModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/GetTeacherByIdModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/SearchTeachersModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/SearchTeachersModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -373,7 +372,7 @@
       <workItem from="1777466016084" duration="2947000" />
       <workItem from="1777749632676" duration="1114000" />
       <workItem from="1777750939412" duration="3698000" />
-      <workItem from="1777894455809" duration="5189000" />
+      <workItem from="1777894455809" duration="9608000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with domain, application, and infrastructure layers">
       <option name="closed" value="true" />
@@ -439,7 +438,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777897659783</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add entity configurations for AttendanceRequest, Class, School, Student, Teacher, and User">
+      <option name="closed" value="true" />
+      <created>1777900776518</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1777900776518</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +475,8 @@
     <MESSAGE value="Refactor ClassRepository to apply search term using a dedicated method" />
     <MESSAGE value="Refactor TeacherCommandHandler to check school IDs for entity validation" />
     <MESSAGE value="Improve error messages in TeacherCommandHandler for user not found exceptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improve error messages in TeacherCommandHandler for user not found exceptions" />
+    <MESSAGE value="Add entity configurations for AttendanceRequest, Class, School, Student, Teacher, and User" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add entity configurations for AttendanceRequest, Class, School, Student, Teacher, and User" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

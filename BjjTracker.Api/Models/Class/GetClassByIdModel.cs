@@ -9,10 +9,11 @@ public class GetClassByIdModel
 	[Required]
 	[FromRoute]
 	[MinLength(1)]
-	public int ClassId { get; set; }
+	public int ClassId { get; init; }
 	
 	public GetClassByIdFilter GetFilter()
 	{
+		ArgumentOutOfRangeException.ThrowIfNegativeOrZero(ClassId);
 		return new GetClassByIdFilter(ClassId);
 	}
 }
