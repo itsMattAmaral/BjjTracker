@@ -8,7 +8,6 @@ public class TeacherMap : IEntityTypeConfiguration<Teacher>
 {
 	public void Configure(EntityTypeBuilder<Teacher> builder)
 	{
-		builder.ToTable("Users");
 		builder.HasOne(t => t.School).WithMany(s => s.Teachers).HasForeignKey(t => t.SchoolId);
 	}
 }
