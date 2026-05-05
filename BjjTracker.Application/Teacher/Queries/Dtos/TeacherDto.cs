@@ -11,6 +11,4 @@ public class TeacherDto : BaseUserDto
 	public bool IsSchoolOwner { get; set; }
 	public int? SchoolOwnedId { get; set; }
 	public SchoolDto? SchoolOwned { get; set; }
-	
-	
 }
