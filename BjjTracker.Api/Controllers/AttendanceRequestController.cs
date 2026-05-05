@@ -23,7 +23,8 @@ public class AttendanceRequestController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<ActionResult<PagedResponseDto<AttendanceRequestDto>>> SearchAttendanceRequests([FromQuery] SearchAttendanceRequestsModel model, CancellationToken cancellationToken = default)
+	public async Task<ActionResult<PagedResponseDto<AttendanceRequestDto>>> SearchAttendanceRequests(
+		[FromQuery] SearchAttendanceRequestsModel model, CancellationToken cancellationToken = default)
 	{
 		var query = model.GetFilter();
 		try
@@ -42,7 +43,8 @@ public class AttendanceRequestController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<ActionResult<IEnumerable<AttendanceRequestDto>>> GetAttendanceRequestsByClassId([FromRoute] int classId, CancellationToken cancellationToken = default)
+	public async Task<ActionResult<IEnumerable<AttendanceRequestDto>>> GetAttendanceRequestsByClassId(
+		[FromRoute] int classId, CancellationToken cancellationToken = default)
 	{
 		var model = new GetAttendancesByClassIdModel { ClassId = classId };
 		var query = model.GetFilter();
@@ -62,7 +64,8 @@ public class AttendanceRequestController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<ActionResult<IEnumerable<AttendanceRequestDto>>> GetAttendanceRequestsByStudentId([FromRoute] int studentId, CancellationToken cancellationToken = default)
+	public async Task<ActionResult<IEnumerable<AttendanceRequestDto>>> GetAttendanceRequestsByStudentId(
+		[FromRoute] int studentId, CancellationToken cancellationToken = default)
 	{
 		var model = new GetAttendancesByStudentIdModel { StudentId = studentId };
 		var query = model.GetFilter();
@@ -82,7 +85,8 @@ public class AttendanceRequestController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<ActionResult<IEnumerable<AttendanceRequestDto>>> GetAttendanceRequestByClassIdAndStudentId([FromRoute] int classId, [FromRoute] int studentId, CancellationToken cancellationToken = default)
+	public async Task<ActionResult<IEnumerable<AttendanceRequestDto>>> GetAttendanceRequestByClassIdAndStudentId(
+		[FromRoute] int classId, [FromRoute] int studentId, CancellationToken cancellationToken = default)
 	{
 		var model = new GetAttendenceRequest { ClassId = classId, StudentId = studentId };
 		var query = model.GetFilter();
@@ -106,7 +110,8 @@ public class AttendanceRequestController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<ActionResult> RegisterAttendanceRequest([FromBody] RegisterAttendanceModel model, CancellationToken cancellationToken)
+	public async Task<ActionResult> RegisterAttendanceRequest(
+		[FromBody] RegisterAttendanceModel model, CancellationToken cancellationToken)
 	{
 		var command = model.GetCommand();
 
@@ -139,7 +144,8 @@ public class AttendanceRequestController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<ActionResult> ApproveAttendanceRequest([FromBody] ApproveAttendanceModel model, CancellationToken cancellationToken)
+	public async Task<ActionResult> ApproveAttendanceRequest(
+		[FromBody] ApproveAttendanceModel model, CancellationToken cancellationToken)
 	{
 		var command = model.GetCommand();
 
@@ -167,7 +173,8 @@ public class AttendanceRequestController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<ActionResult> DeleteAttendanceRequest([FromBody] DeleteAttendanceModel model, CancellationToken cancellationToken)
+	public async Task<ActionResult> DeleteAttendanceRequest(
+		[FromBody] DeleteAttendanceModel model, CancellationToken cancellationToken)
 	{
 		var command = model.GetCommand();
 
