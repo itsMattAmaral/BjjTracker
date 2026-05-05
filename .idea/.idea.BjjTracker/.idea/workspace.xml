@@ -19,15 +19,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1779c8-03b1-47be-a624-cb58d1e7e610" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/AddOwnerModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/RemoveOwnerModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/Actions/AddOwnerCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/Actions/RemoveOwnerCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Teacher/TeacherAlreadyOwnsThisSchoolException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Teacher/TeacherOwnsAnotherSchoolException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/ISchoolCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/ISchoolCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/SchoolCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/SchoolCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/Authentication/UserRegisterViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Authentication/UserRegisterViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/Authentication/JwtAuthenticationHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/Authentication/JwtAuthenticationHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/UserMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/UserMap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Migrations/BjjTrackerDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Migrations/BjjTrackerDbContextModelSnapshot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +41,9 @@
   </component>
   <component name="CopilotUserSelectedModel">
     <selectedModels>
+      <entry key="agent-panel" value="Claude Opus 4.6" />
       <entry key="edit-panel" value="GPT-4.1" />
-      <entry key="chat-panel" value="GPT-5.3-Codex" />
-      <entry key="agent-panel" value="GPT-5.3-Codex" />
+      <entry key="chat-panel" value="Claude Opus 4.6" />
     </selectedModels>
   </component>
   <component name="DpaMonitoringSettings">
@@ -394,7 +391,7 @@
       <workItem from="1777466016084" duration="2947000" />
       <workItem from="1777749632676" duration="1114000" />
       <workItem from="1777750939412" duration="3698000" />
-      <workItem from="1777894455809" duration="39100000" />
+      <workItem from="1777894455809" duration="44037000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with domain, application, and infrastructure layers">
       <option name="closed" value="true" />
@@ -540,7 +537,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777990935198</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Add commands and models for managing school owners with validation">
+      <option name="closed" value="true" />
+      <created>1777993158879</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1777993158879</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,7 +584,8 @@
     <MESSAGE value="Refactor AttendanceRequestController methods for improved readability by formatting parameters" />
     <MESSAGE value="Add SchoolOwners management and update related entities for improved functionality" />
     <MESSAGE value="Remove unnecessary whitespace in TeacherDto.cs for cleaner code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary whitespace in TeacherDto.cs for cleaner code" />
+    <MESSAGE value="Add commands and models for managing school owners with validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add commands and models for managing school owners with validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -596,6 +602,19 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BjjTracker.Application/School/Commands/SchoolCommandHandler.cs</url>
+          <line>49</line>
+          <properties documentPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/SchoolCommandHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="2270" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2360" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

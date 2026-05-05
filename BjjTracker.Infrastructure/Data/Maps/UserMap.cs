@@ -10,7 +10,9 @@ public class UserMap : IEntityTypeConfiguration<User>
 	public void Configure(EntityTypeBuilder<User> builder)
 	{
 		builder.ToTable("Users");
-		builder.HasDiscriminator<Roles>("Role").HasValue<Student>(Roles.Student).HasValue<Teacher>(Roles.Teacher);
+		builder.HasDiscriminator<Roles>("Role")
+			.HasValue<Student>(Roles.Student)
+			.HasValue<Teacher>(Roles.Teacher);
 		builder.HasKey(e => e.Id);
 		builder.Property(e => e.Email).IsRequired().HasMaxLength(200);
 		builder.Property(e => e.Password).IsRequired().HasMaxLength(200);

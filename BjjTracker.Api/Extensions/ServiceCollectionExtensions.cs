@@ -93,7 +93,7 @@ public static class ServiceCollectionExtensions
 		services.AddAuthorizationBuilder()
 			.AddPolicy("TeacherOnly", policy => policy.RequireRole("Teacher"))
 			.AddPolicy("StudentOnly", policy => policy.RequireRole("Student"))
-			.AddPolicy("SchoolOwner", policy => policy.RequireRole("Teacher").RequireClaim("IsSchoolOwner", "True"));
+			.AddPolicy("SchoolOwner", policy => policy.RequireRole("SchoolOwner"));
 		return services;
 	}
 
