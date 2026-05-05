@@ -5,6 +5,7 @@ using BjjTracker.Application.Common.Dtos;
 using BjjTracker.Application.Student.Queries.Dtos;
 using BjjTracker.Domain.Exceptions.School;
 using BjjTracker.Domain.Exceptions.User;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BjjTracker.Api.Controllers;
 
@@ -12,6 +13,7 @@ namespace BjjTracker.Api.Controllers;
 [ApiController]
 [Produces("application/json")]
 [Route("[controller]")]
+[Authorize]
 public class StudentController(IMediator mediator) : ControllerBase
 {
 	private readonly IMediator _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));

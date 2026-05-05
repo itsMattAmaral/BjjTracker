@@ -4,6 +4,7 @@ using BjjTracker.Application.Teacher.Queries.Dtos;
 using BjjTracker.Domain.Exceptions.School;
 using BjjTracker.Domain.Exceptions.User;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BjjTracker.Api.Controllers;
@@ -11,6 +12,7 @@ namespace BjjTracker.Api.Controllers;
 [ApiController]
 [Produces("application/json")]
 [Route("[controller]")]
+[Authorize]
 public class TeacherController(IMediator mediator) : ControllerBase
 {
 	private readonly IMediator _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));

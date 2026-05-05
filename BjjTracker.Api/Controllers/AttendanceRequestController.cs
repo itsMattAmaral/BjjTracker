@@ -5,6 +5,7 @@ using BjjTracker.Domain.Exceptions.AttendanceRequest;
 using BjjTracker.Domain.Exceptions.Class;
 using BjjTracker.Domain.Exceptions.User;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BjjTracker.Api.Controllers;
@@ -12,6 +13,7 @@ namespace BjjTracker.Api.Controllers;
 [ApiController]
 [Produces("application/json")]
 [Route("[controller]")]
+[Authorize]
 public class AttendanceRequestController(IMediator mediator) : ControllerBase
 {
 	private readonly IMediator _mediator = mediator ?? throw new ArgumentException(nameof(mediator));

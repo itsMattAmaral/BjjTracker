@@ -19,39 +19,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1779c8-03b1-47be-a624-cb58d1e7e610" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/AttendanceRequestController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/AttendanceRequest/ApproveAttendanceModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/AttendanceRequest/DeleteAttendanceModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/AttendanceRequest/GetAttendancesByClassIdModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/AttendanceRequest/GetAttendancesByStudentIdModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/AttendanceRequest/GetAttendenceRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/AttendanceRequest/RegisterAttendanceModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/AttendanceRequest/SearchAttendanceRequestsModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Commands/Actions/ApproveAttendanceCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Commands/Actions/DeleteAttendanceCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Commands/Actions/RegisterAttendanceCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Commands/AttendanceRequestCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Commands/IAttendanceRequestCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Queries/AttendanceRequestQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Queries/Filters/GetAttendanceRequestFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Queries/Filters/GetAttendancesByClassIdFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Queries/Filters/GetAttendancesByStudentIdFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Queries/Filters/SearchAttendanceRequestFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Queries/IAttendanceRequestQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/AttendanceRequest/AttendanceRequestNotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/User/UserAlreadyOpenedARequestForThisClassException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Interfaces/IAttendanceRequestRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/AttendanceRequestRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/BjjTracker.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/BjjTracker.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Domain/Entities/AttendanceRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/AttendanceRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Domain/Entities/Class.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/Class.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/BjjTrackerDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/BjjTrackerDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/AttendanceRequestMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/AttendanceRequestMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/StudentMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/StudentMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/TeacherMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/TeacherMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Migrations/BjjTrackerDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Migrations/BjjTrackerDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/AttendanceRequestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/AttendanceRequestController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/ClassController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/ClassController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -413,7 +385,7 @@
       <workItem from="1777466016084" duration="2947000" />
       <workItem from="1777749632676" duration="1114000" />
       <workItem from="1777750939412" duration="3698000" />
-      <workItem from="1777894455809" duration="29926000" />
+      <workItem from="1777894455809" duration="30316000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with domain, application, and infrastructure layers">
       <option name="closed" value="true" />
@@ -503,7 +475,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777925910905</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Remove unused ApproveAttendedRequest method and update entity configurations for Student and Teacher to correct table mappings">
+      <option name="closed" value="true" />
+      <created>1777980711640</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1777980711640</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add commands and models for attendance request management, including approval and deletion">
+      <option name="closed" value="true" />
+      <created>1777980768318</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1777980768318</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +523,9 @@
     <MESSAGE value="Add entity configurations for AttendanceRequest, Class, School, Student, Teacher, and User" />
     <MESSAGE value="Refactor model properties to use init-only setters and improve validation checks" />
     <MESSAGE value="Change response from Ok to Created in ClassController after successful command execution" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change response from Ok to Created in ClassController after successful command execution" />
+    <MESSAGE value="Remove unused ApproveAttendedRequest method and update entity configurations for Student and Teacher to correct table mappings" />
+    <MESSAGE value="Add commands and models for attendance request management, including approval and deletion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add commands and models for attendance request management, including approval and deletion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
