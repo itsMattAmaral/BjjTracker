@@ -16,9 +16,4 @@
       <ProjectReference Include="..\BjjTracker.Domain\BjjTracker.Domain.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="AttendanceRequest\Commands\Actions\" />
-      <Folder Include="AttendanceRequest\Queries\Filters\" />
-    </ItemGroup>
-
 </Project>

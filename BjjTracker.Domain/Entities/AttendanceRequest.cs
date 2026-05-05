@@ -7,4 +7,12 @@ public class AttendanceRequest
 	public int StudentId { get; set; }
 	public Student? Student { get; set; }
 	public bool Attended { get; set; }
+	public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+	public DateTime? UpdatedAt { get; set; }
+	
+	public void ApproveAttendedRequest()
+	{
+		Attended = true;
+		UpdatedAt = DateTime.UtcNow;
+	}
 }

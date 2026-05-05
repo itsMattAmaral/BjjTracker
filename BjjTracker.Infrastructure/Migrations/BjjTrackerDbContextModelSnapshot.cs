@@ -33,6 +33,16 @@ namespace BjjTracker.Infrastructure.Migrations
                     b.Property<bool>("Attended")
                         .HasColumnType("boolean");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
                     b.HasKey("ClassId", "StudentId");
 
                     b.HasIndex("StudentId");
@@ -194,8 +204,6 @@ namespace BjjTracker.Infrastructure.Migrations
 
                     b.HasIndex("SchoolId");
 
-                    b.ToTable("Users", (string)null);
-
                     b.HasDiscriminator().HasValue(1);
                 });
 
@@ -207,8 +215,6 @@ namespace BjjTracker.Infrastructure.Migrations
                         .HasColumnType("boolean");
 
                     b.HasIndex("SchoolId");
-
-                    b.ToTable("Users", (string)null);
 
                     b.HasDiscriminator().HasValue(0);
                 });

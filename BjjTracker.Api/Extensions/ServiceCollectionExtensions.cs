@@ -32,6 +32,7 @@ public static class ServiceCollectionExtensions
 		services.AddScoped<IStudentRepository, StudentRepository>();
 		services.AddScoped<ISchoolRepository, SchoolRepository>();
 		services.AddScoped<IClassRepository, ClassRepository>();
+		services.AddScoped<IAttendanceRequestRepository, AttendanceRequestRepository>();
 		return services;
 	}
 
@@ -46,7 +47,9 @@ public static class ServiceCollectionExtensions
 			typeof(Application.Teacher.Queries.TeacherQueryHandler),
 			typeof(Application.School.Commands.SchoolCommandHandler),
 			typeof(Application.Class.Commands.ClassCommandHandler),
-			typeof(Application.Class.Queries.ClassQueryHandler)
+			typeof(Application.Class.Queries.ClassQueryHandler),
+			typeof(Application.AttendanceRequest.Commands.AttendanceRequestCommandHandler),
+			typeof(Application.AttendanceRequest.Queries.AttendanceRequestQueryHandler)
 		};
 		
 		foreach (var type in assemblyTypes)

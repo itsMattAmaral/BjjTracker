@@ -1,5 +1,4 @@
 using BjjTracker.Domain.Entities;
-using BjjTracker.Domain.Enums;
 using BjjTracker.Infrastructure.Data.Maps;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +9,7 @@ public class BjjTrackerDbContext(DbContextOptions<BjjTrackerDbContext> options):
 	public DbSet<User> Users => Set<User>();
 	public DbSet<Class> Classes => Set<Class>();
 	public DbSet<School> Schools => Set<School>();
+	public  DbSet<AttendanceRequest> AttendanceRequests => Set<AttendanceRequest>();
 
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{

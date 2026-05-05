@@ -9,6 +9,10 @@ public class AttendanceRequestMap : IEntityTypeConfiguration<AttendanceRequest>
 	public void Configure(EntityTypeBuilder<AttendanceRequest> builder)
 	{
 		builder.ToTable("AttendanceRequests");
+		builder.Property(e => e.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+		builder.Property(e => e.UpdatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+		builder.Property(e => e.StudentId).IsRequired();
+		builder.Property(e => e.ClassId).IsRequired();
 		builder.HasKey(e => new { e.ClassId, e.StudentId });
 		builder.HasOne(e => e.Class)
 			.WithMany(c => c.AttendanceRequests)
