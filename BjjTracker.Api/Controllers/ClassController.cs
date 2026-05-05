@@ -11,7 +11,7 @@ namespace BjjTracker.Api.Controllers;
 [ApiController]
 [Produces("application/json")]
 [Route("[controller]")]
-[Authorize]
+[Authorize(Policy = "TeacherOnly")]
 public class ClassController(IMediator mediator) : ControllerBase
 {
 	private readonly IMediator _mediator = mediator ?? throw new ArgumentException(nameof(mediator));

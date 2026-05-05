@@ -13,7 +13,7 @@ namespace BjjTracker.Api.Controllers;
 [ApiController]
 [Produces("application/json")]
 [Route("[controller]")]
-[Authorize]
+[Authorize(Policy = "AnyUser")]
 public class AttendanceRequestController(IMediator mediator) : ControllerBase
 {
 	private readonly IMediator _mediator = mediator ?? throw new ArgumentException(nameof(mediator));
@@ -134,6 +134,7 @@ public class AttendanceRequestController(IMediator mediator) : ControllerBase
 	}
 
 	[HttpPatch("Approve")]
+	[Authorize(Policy = "TeacherOnly")]
 	[ProducesResponseType(StatusCodes.Status204NoContent)]
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status404NotFound)]
