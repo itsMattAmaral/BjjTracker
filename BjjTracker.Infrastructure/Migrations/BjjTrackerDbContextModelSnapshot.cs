@@ -212,9 +212,16 @@ namespace BjjTracker.Infrastructure.Migrations
                     b.HasBaseType("BjjTracker.Domain.Entities.User");
 
                     b.Property<bool>("IsSchoolOwner")
-                        .HasColumnType("boolean");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false);
+
+                    b.Property<int?>("SchoolOwnedId")
+                        .HasColumnType("integer");
 
                     b.HasIndex("SchoolId");
+
+                    b.HasIndex("SchoolOwnedId");
 
                     b.HasDiscriminator().HasValue(0);
                 });
@@ -272,7 +279,14 @@ namespace BjjTracker.Infrastructure.Migrations
                         .WithMany("Teachers")
                         .HasForeignKey("SchoolId");
 
+                    b.HasOne("BjjTracker.Domain.Entities.School", "SchoolOwned")
+                        .WithMany("Owners")
+                        .HasForeignKey("SchoolOwnedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
                     b.Navigation("School");
+
+                    b.Navigation("SchoolOwned");
                 });
 
             modelBuilder.Entity("BjjTracker.Domain.Entities.Class", b =>
@@ -283,6 +297,8 @@ namespace BjjTracker.Infrastructure.Migrations
             modelBuilder.Entity("BjjTracker.Domain.Entities.School", b =>
                 {
                     b.Navigation("Classes");
+
+                    b.Navigation("Owners");
 
                     b.Navigation("Students");
 

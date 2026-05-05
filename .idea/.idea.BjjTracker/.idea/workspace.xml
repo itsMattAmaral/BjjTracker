@@ -19,11 +19,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1779c8-03b1-47be-a624-cb58d1e7e610" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Common/Dtos/LoginDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/AttendanceRequestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/AttendanceRequestController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/ClassController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/ClassController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/School/RegisterSchoolModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/RegisterSchoolModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/Class/Queries/ClassQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Queries/ClassQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/Actions/RegisterSchoolCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/Actions/RegisterSchoolCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/SchoolCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/SchoolCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/Dtos/SchoolDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/Dtos/SchoolDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/SchoolQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/SchoolQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/Dtos/TeacherDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/Dtos/TeacherDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/TeacherQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/TeacherQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/User/Commands/Actions/LoginUserCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/User/Commands/Actions/LoginUserCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/User/Commands/UserCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/User/Commands/UserCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Domain/Entities/School.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/School.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Domain/Entities/Teacher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/Teacher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/TeacherMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/TeacherMap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Migrations/BjjTrackerDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Migrations/BjjTrackerDbContextModelSnapshot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +123,7 @@
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Class/Queries/Filters/SearchClassesFilter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Class/Queries/IClassQueryHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Common/Dtos/BaseUserDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Common/Dtos/LoginDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Common/Dtos/PagedResponseDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/School/Commands/ISchoolCommandHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/School/Commands/SchoolCommandHandler.cs" root0="FORCE_HIGHLIGHTING" />
@@ -385,7 +402,7 @@
       <workItem from="1777466016084" duration="2947000" />
       <workItem from="1777749632676" duration="1114000" />
       <workItem from="1777750939412" duration="3698000" />
-      <workItem from="1777894455809" duration="31363000" />
+      <workItem from="1777894455809" duration="36726000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with domain, application, and infrastructure layers">
       <option name="closed" value="true" />
@@ -499,7 +516,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777981173785</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add authorization policies to AttendanceRequest, Class, Student, and Teacher controllers">
+      <option name="closed" value="true" />
+      <created>1777985071208</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1777985071208</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Refactor AttendanceRequestController methods for improved readability by formatting parameters">
+      <option name="closed" value="true" />
+      <created>1777985241354</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1777985241354</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +567,9 @@
     <MESSAGE value="Remove unused ApproveAttendedRequest method and update entity configurations for Student and Teacher to correct table mappings" />
     <MESSAGE value="Add commands and models for attendance request management, including approval and deletion" />
     <MESSAGE value="Add authorization attributes to AttendanceRequest, Class, School, Student, and Teacher controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add authorization attributes to AttendanceRequest, Class, School, Student, and Teacher controllers" />
+    <MESSAGE value="Add authorization policies to AttendanceRequest, Class, Student, and Teacher controllers" />
+    <MESSAGE value="Refactor AttendanceRequestController methods for improved readability by formatting parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor AttendanceRequestController methods for improved readability by formatting parameters" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -551,19 +586,6 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/BjjTracker.Application/Authentication/JwtAuthenticationHelper.cs</url>
-          <line>21</line>
-          <properties documentPath="$PROJECT_DIR$/BjjTracker.Application/Authentication/JwtAuthenticationHelper.cs" containingFunctionPresentation="Method 'GenerateJwtToken'">
-            <startOffsets>
-              <option value="713" />
-            </startOffsets>
-            <endOffsets>
-              <option value="850" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

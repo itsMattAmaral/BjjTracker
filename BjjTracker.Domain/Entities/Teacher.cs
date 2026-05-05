@@ -6,6 +6,10 @@ public class Teacher : User
 {
 	public bool IsSchoolOwner { get; set; }
 	
+	public int? SchoolOwnedId { get; set; }
+	
+	public School? SchoolOwned { get; set; }
+	
 	public new BeltColors BeltColor { get; set; } = BeltColors.Black;
 	
 	public void UpdateSchool(int schoolId)
@@ -14,9 +18,19 @@ public class Teacher : User
 		UpdatedAt = DateTime.UtcNow;
 	}
 
-	public void MarkAsSchoolOwner()
+	public void MarkAsSchoolOwner(School school)
 	{
 		IsSchoolOwner = true;
+		SchoolOwnedId = school.Id;
+		SchoolOwned = school;
+		UpdatedAt = DateTime.UtcNow;
+	}
+
+	public void UnmarkAsSchoolOwner()
+	{
+		IsSchoolOwner = false;
+		SchoolOwnedId = null;
+		SchoolOwned = null;
 		UpdatedAt = DateTime.UtcNow;
 	}
 	

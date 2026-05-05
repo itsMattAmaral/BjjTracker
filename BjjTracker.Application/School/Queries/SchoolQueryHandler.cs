@@ -78,6 +78,8 @@ public class SchoolQueryHandler(ISchoolRepository schoolRepository) : ISchoolQue
 			{
 				Id = teacher.Id,
 				IsSchoolOwner = teacher.IsSchoolOwner,
+				SchoolOwnedId = teacher.SchoolOwnedId,
+				BeltColor = teacher.BeltColor,
 				FirstName = teacher.FirstName, 
 				LastName = teacher.LastName,
 				Email = teacher.Email,
@@ -128,7 +130,21 @@ public class SchoolQueryHandler(ISchoolRepository schoolRepository) : ISchoolQue
 			UpdatedAt = school.UpdatedAt,
 			Students = studentsDto,
 			Teachers = teachersDto,
-			Classes = classesDto
+			Classes = classesDto,
+			Owners = school.Owners.Select(owner => new TeacherDto
+			{
+				Id = owner.Id,
+				FirstName = owner.FirstName,
+				LastName = owner.LastName,
+				Email = owner.Email,
+				Role = owner.Role,
+				CreatedAt = owner.CreatedAt,
+				UpdatedAt = owner.UpdatedAt,
+				SchoolId = owner.SchoolId,
+				BeltColor = owner.BeltColor,
+				IsSchoolOwner = owner.IsSchoolOwner,
+				SchoolOwnedId = owner.SchoolOwnedId
+			}).ToList(),
 		};
 	}
 }

@@ -7,6 +7,7 @@ public record RegisterSchoolCommand(
 	string Name,
 	string ContactEmail,
 	string? ContactPhone,
+	List<int> Owners,
 	List<int>? Teachers,
 	List<int>? Students
 	) : IRequest;

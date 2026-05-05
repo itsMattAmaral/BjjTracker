@@ -9,6 +9,8 @@ public class School(string document, string name, string contactEmail, string? c
 	public string? ContactPhone { get; set; } = contactPhone;
 	public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 	public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+	
+	public List<Teacher> Owners { get; set; } = [];
 	public List<Teacher> Teachers { get; set; } = [];
 	public List<Student> Students { get; set; } = [];
 	public List<Class> Classes { get; set; } = [];
@@ -21,6 +23,16 @@ public class School(string document, string name, string contactEmail, string? c
 		}
 		
 		Teachers = teachers;
+		UpdatedAt = DateTime.UtcNow;
+	}
+
+	public void SetOwners(List<Teacher> teachers)
+	{
+		foreach (var teacher in teachers)
+		{
+			teacher.MarkAsSchoolOwner(this);
+		}
+		Owners = teachers;
 		UpdatedAt = DateTime.UtcNow;
 	}
 
@@ -50,6 +62,20 @@ public class School(string document, string name, string contactEmail, string? c
 	{
 		Name = name;
 		UpdatedAt = DateTime.UtcNow;
+	}
+
+	public void AddOwner(Teacher teacher)
+	{
+		Owners.Add(teacher);
+		UpdatedAt = DateTime.UtcNow;
+		teacher.MarkAsSchoolOwner(this);
+	}
+
+	public void RemoveOwner(Teacher teacher)
+	{
+		Owners.Remove(teacher);
+		UpdatedAt = DateTime.UtcNow;
+		teacher.UnmarkAsSchoolOwner();
 	}
 
 	public void AddTeacher(Teacher teacher)

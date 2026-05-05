@@ -13,7 +13,7 @@ namespace BjjTracker.Api.Controllers;
 [ApiController]
 [Produces("application/json")]
 [Route("[controller]")]
-[Authorize(Policy = "StudentOnly")]
+[Authorize]
 public class StudentController(IMediator mediator) : ControllerBase
 {
 	private readonly IMediator _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
@@ -66,6 +66,7 @@ public class StudentController(IMediator mediator) : ControllerBase
 
 	}
 	
+	[Authorize(Policy = "StudentOnly")]
 	[HttpPatch("{studentId:int}/school")]
 	[ProducesResponseType(StatusCodes.Status204NoContent)]
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -94,6 +95,7 @@ public class StudentController(IMediator mediator) : ControllerBase
 		}
 	}
 	
+	[Authorize(Policy = "StudentOnly")]
 	[HttpPatch("{studentId:int}/name")]
 	[ProducesResponseType(StatusCodes.Status204NoContent)]
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]

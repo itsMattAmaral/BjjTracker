@@ -1,4 +1,7 @@
+using BjjTracker.Application.Class.Queries.Dtos;
 using BjjTracker.Application.Common.Dtos;
+using BjjTracker.Application.School.Queries.Dtos;
+using BjjTracker.Application.Student.Queries.Dtos;
 using BjjTracker.Application.Teacher.Queries.Dtos;
 using BjjTracker.Application.Teacher.Queries.Filters;
 using BjjTracker.Domain.Exceptions.User;
@@ -27,7 +30,32 @@ public class TeacherQueryHandler(ITeacherRepository teacherRepository) : ITeache
 			UpdatedAt = teacher.UpdatedAt,
 			SchoolId = teacher.SchoolId,
 			BeltColor = teacher.BeltColor,
-			IsSchoolOwner = teacher.IsSchoolOwner
+			IsSchoolOwner = teacher.IsSchoolOwner,
+			SchoolOwnedId = teacher.SchoolOwnedId,
+			SchoolOwned = teacher.SchoolOwned != null ? new SchoolDto
+			{
+				Id = teacher.SchoolOwned.Id,
+				Name = teacher.SchoolOwned.Name,
+				Document = teacher.SchoolOwned.Document,
+				Owners = teacher.SchoolOwned.Owners.Select(owner => new TeacherDto
+				{
+					Id = owner.Id,
+					FirstName = owner.FirstName,
+					LastName = owner.LastName,
+					Email = owner.Email,
+					Role = owner.Role,
+					CreatedAt = owner.CreatedAt,
+					UpdatedAt = owner.UpdatedAt,
+					SchoolId = owner.SchoolId,
+					BeltColor = owner.BeltColor,
+					IsSchoolOwner = owner.IsSchoolOwner,
+					SchoolOwnedId = owner.SchoolOwnedId
+				}).ToList(),
+				ContactPhone = teacher.SchoolOwned.ContactPhone,
+				ContactEmail = teacher.SchoolOwned.ContactEmail,
+				CreatedAt = teacher.SchoolOwned.CreatedAt,
+				UpdatedAt = teacher.SchoolOwned.UpdatedAt
+			} : null
 		};
 	}
 
@@ -53,7 +81,32 @@ public class TeacherQueryHandler(ITeacherRepository teacherRepository) : ITeache
 			UpdatedAt = teacher.UpdatedAt,
 			SchoolId = teacher.SchoolId,
 			BeltColor = teacher.BeltColor,
-			IsSchoolOwner = teacher.IsSchoolOwner
+			IsSchoolOwner = teacher.IsSchoolOwner,
+			SchoolOwnedId = teacher.SchoolOwnedId,
+			SchoolOwned = teacher.SchoolOwned != null ? new SchoolDto
+			{
+				Id = teacher.SchoolOwned.Id,
+				Name = teacher.SchoolOwned.Name,
+				Document = teacher.SchoolOwned.Document,
+				Owners = teacher.SchoolOwned.Owners.Select(owner => new TeacherDto
+				{
+					Id = owner.Id,
+					FirstName = owner.FirstName,
+					LastName = owner.LastName,
+					Email = owner.Email,
+					Role = owner.Role,
+					CreatedAt = owner.CreatedAt,
+					UpdatedAt = owner.UpdatedAt,
+					SchoolId = owner.SchoolId,
+					BeltColor = owner.BeltColor,
+					IsSchoolOwner = owner.IsSchoolOwner,
+					SchoolOwnedId = owner.SchoolOwnedId
+				}).ToList(),
+				ContactPhone = teacher.SchoolOwned.ContactPhone,
+				ContactEmail = teacher.SchoolOwned.ContactEmail,
+				CreatedAt = teacher.SchoolOwned.CreatedAt,
+				UpdatedAt = teacher.SchoolOwned.UpdatedAt
+			} : null
 		});
 		
 		var totalItems = await _teacherRepository.CountAsync(request.SearchTerm, cancellationToken);

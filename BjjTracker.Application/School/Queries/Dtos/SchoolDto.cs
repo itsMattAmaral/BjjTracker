@@ -13,6 +13,7 @@ public class SchoolDto
 	public string? ContactPhone { get; set; }
 	public DateTime CreatedAt { get; set; }
 	public DateTime UpdatedAt { get; set; }
+	public required List<TeacherDto> Owners { get; set; }
 	public List<StudentDto>? Students { get; set; }
 	public List<TeacherDto>? Teachers { get; set; }
 	public List<ClassDto>? Classes { get; set; }

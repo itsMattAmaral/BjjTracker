@@ -87,6 +87,7 @@ public class SchoolController(IMediator mediator) : ControllerBase
 	}
 	
 	[HttpPost]
+	[Authorize(Policy = "TeacherOnly")]
 	[ProducesResponseType(StatusCodes.Status201Created)]
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]

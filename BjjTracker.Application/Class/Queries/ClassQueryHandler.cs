@@ -61,6 +61,7 @@ public class ClassQueryHandler(IClassRepository classRepository) : IClassQueryHa
 				Role = classEntity.Teacher.Role,
 				SchoolId = classEntity.Teacher.SchoolId,
 				IsSchoolOwner = classEntity.Teacher.IsSchoolOwner,
+				SchoolOwnedId = classEntity.Teacher.SchoolOwnedId,
 				BeltColor = classEntity.Teacher.BeltColor,
 				CreatedAt = classEntity.Teacher.CreatedAt,
 				UpdatedAt = classEntity.Teacher.UpdatedAt
@@ -75,8 +76,7 @@ public class ClassQueryHandler(IClassRepository classRepository) : IClassQueryHa
 						ClassId = attendanceRequest.ClassId,
 						StudentId = attendanceRequest.StudentId,
 						Attended = attendanceRequest.Attended
-					}
-					).ToList()
+					}).ToList()
 		};
 	}
 }

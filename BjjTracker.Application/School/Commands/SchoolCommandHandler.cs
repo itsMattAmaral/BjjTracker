@@ -20,6 +20,10 @@ public class SchoolCommandHandler(ISchoolRepository schoolRepository, ITeacherRe
 			request.Name,
 			request.ContactEmail,
 			request.ContactPhone);
+
+		var filteredOwnerIds = request.Owners.Where(id => id != newSchool.Id && id > 0).ToList();
+		var newOwners = await _teacherRepository.GetByIdsAsync(filteredOwnerIds, cancellationToken);
+		newSchool.SetOwners(newOwners);
 		
 		if (request.Teachers != null)
 		{
