@@ -19,27 +19,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1779c8-03b1-47be-a624-cb58d1e7e610" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Common/Dtos/LoginDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/AddOwnerModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/RemoveOwnerModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/Actions/AddOwnerCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/Actions/RemoveOwnerCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Teacher/TeacherAlreadyOwnsThisSchoolException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Teacher/TeacherOwnsAnotherSchoolException.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Models/School/RegisterSchoolModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/RegisterSchoolModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/Class/Queries/ClassQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Queries/ClassQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/Actions/RegisterSchoolCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/Actions/RegisterSchoolCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/ISchoolCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/ISchoolCommandHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/SchoolCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/SchoolCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/Dtos/SchoolDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/Dtos/SchoolDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/SchoolQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/SchoolQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/Dtos/TeacherDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/Dtos/TeacherDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/TeacherQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/TeacherQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/User/Commands/Actions/LoginUserCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/User/Commands/Actions/LoginUserCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Application/User/Commands/UserCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Application/User/Commands/UserCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Domain/Entities/School.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/School.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Domain/Entities/Teacher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/Teacher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/TeacherMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/TeacherMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Infrastructure/Migrations/BjjTrackerDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Migrations/BjjTrackerDbContextModelSnapshot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +113,8 @@
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Common/Dtos/BaseUserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Common/Dtos/LoginDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Common/Dtos/PagedResponseDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Application/School/Commands/Actions/AddOwnerCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Application/School/Commands/Actions/RemoveOwnerCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/School/Commands/ISchoolCommandHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/School/Commands/SchoolCommandHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/School/Queries/Dtos/SchoolDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -161,6 +151,8 @@
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Class/ClassNotFoundException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/School/IsNotFromTheSameSchoolException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/School/SchoolExistsException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Teacher/TeacherAlreadyOwnsThisSchoolException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Teacher/TeacherOwnsAnotherSchoolException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/User/RoleNotFoundException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/User/ThisEmailAlreadyExistsException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/User/UserAlreadyOpenedARequestForThisClassException.cs" root0="FORCE_HIGHLIGHTING" />
@@ -402,7 +394,7 @@
       <workItem from="1777466016084" duration="2947000" />
       <workItem from="1777749632676" duration="1114000" />
       <workItem from="1777750939412" duration="3698000" />
-      <workItem from="1777894455809" duration="36726000" />
+      <workItem from="1777894455809" duration="39100000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with domain, application, and infrastructure layers">
       <option name="closed" value="true" />
@@ -532,7 +524,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777985241354</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add SchoolOwners management and update related entities for improved functionality">
+      <option name="closed" value="true" />
+      <created>1777990885319</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1777990885319</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Remove unnecessary whitespace in TeacherDto.cs for cleaner code">
+      <option name="closed" value="true" />
+      <created>1777990935198</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1777990935198</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +577,9 @@
     <MESSAGE value="Add authorization attributes to AttendanceRequest, Class, School, Student, and Teacher controllers" />
     <MESSAGE value="Add authorization policies to AttendanceRequest, Class, Student, and Teacher controllers" />
     <MESSAGE value="Refactor AttendanceRequestController methods for improved readability by formatting parameters" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor AttendanceRequestController methods for improved readability by formatting parameters" />
+    <MESSAGE value="Add SchoolOwners management and update related entities for improved functionality" />
+    <MESSAGE value="Remove unnecessary whitespace in TeacherDto.cs for cleaner code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary whitespace in TeacherDto.cs for cleaner code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
