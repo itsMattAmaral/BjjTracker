@@ -14,7 +14,7 @@ public class UpdateStudentSchoolIdModel
 		ArgumentOutOfRangeException.ThrowIfNegative(studentId);
 		return new UpdateStudentSchoolIdCommand(SchoolId)
 		{
-			Id = studentId
+			StudentId = studentId
 		};
 	}
 }

@@ -45,7 +45,7 @@ public class ClassRepository(BjjTrackerDbContext dbContext) : IClassRepository
 
 		if (!string.IsNullOrEmpty(searchTerm))
 		{
-			query = query.Where(c => EF.Functions.Like(c.Teacher != null ? c.Teacher.FirstName : string.Empty, $"{searchTerm}%"));
+			query = ApplySearchTerm(query, searchTerm);
 		}
 
 		if (!string.IsNullOrEmpty(sortBy))
@@ -69,7 +69,7 @@ public class ClassRepository(BjjTrackerDbContext dbContext) : IClassRepository
 
 		if (!string.IsNullOrEmpty(searchTerm))
 		{
-			query.Where(c => EF.Functions.Like(c.Teacher != null ? c.Teacher.FirstName : string.Empty, $"{searchTerm}%"));
+			query = ApplySearchTerm(query, searchTerm);
 		}
 		
 		return await query.CountAsync(cancellationToken);
@@ -85,5 +85,12 @@ public class ClassRepository(BjjTrackerDbContext dbContext) : IClassRepository
 	{
 		_dbContext.Classes.Update(classEntity);
 		await _dbContext.SaveChangesAsync(cancellationToken);
+	}
+
+	private static IQueryable<Class> ApplySearchTerm(IQueryable<Class> query, string searchTerm)
+	{
+		return query.Where(c => EF.Functions.Like(c.Teacher.FirstName, $"{searchTerm}%") ||
+		                         EF.Functions.Like(c.Teacher.LastName, $"{searchTerm}%") ||
+		                         EF.Functions.Like(c.Teacher.Email, $"{searchTerm}%"));
 	}
 }

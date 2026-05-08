@@ -19,105 +19,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1779c8-03b1-47be-a624-cb58d1e7e610" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/BjjTracker.Api.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/ClassController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/UserController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ApplicationBuilderExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Authentication/UserLoginViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Authentication/UserRegisterViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Class/GetClassByIdModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Class/RegisterClassModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Class/SearchClassesModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/GetSchoolByDocumentModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/GetSchoolByIdModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/RegisterSchoolModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/School/SearchSchoolsModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/GetStudentByIdModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/SearchStudentsModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/UpdateStudentNameModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Student/UpdateStudentSchoolIdModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/GetTeacherByIdModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/GetTeachersModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/GraduateStudentModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/UpdateTeacherNameModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Queries/Dtos/AttendanceRequestDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Authentication/IJwtAuthenticationHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Authentication/JwtAuthenticationHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/BjjTracker.Application.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Commands/Actions/RegisterClassCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Commands/ClassCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Commands/IClassCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Queries/ClassQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Queries/Dtos/ClassDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Queries/Filters/GetClassByIdFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Queries/Filters/SearchClassesFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Class/Queries/IClassQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Common/Dtos/BaseUserDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Common/Dtos/PagedResponseDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/Actions/RegisterSchoolCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/ISchoolCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/SchoolCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/Dtos/SchoolDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/Filters/GetSchoolByDocumentFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/Filters/GetSchoolByIdFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/Filters/SearchSchoolsFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/ISchoolQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/School/Queries/SchoolQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Commands/Actions/UpdateStudentNameCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Commands/Actions/UpdateStudentSchoolIdCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Commands/IStudentCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Commands/StudentCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Queries/Dtos/StudentDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Queries/Filters/GetStudentByIdFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Queries/Filters/SearchStudentsFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Queries/IStudentQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Student/Queries/StudentQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/Actions/GraduateStudentCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/Actions/UpdateTeacherNameCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/ITeacherCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Commands/TeacherCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/Dtos/TeacherDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/Filters/GetTeacherFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/Filters/TeacherSearchFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/ITeacherQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/Teacher/Queries/TeacherQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/User/Commands/Actions/LoginUserCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/User/Commands/Actions/RegisterUserCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Application/User/Commands/UserCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/AttendanceRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/Class.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/School.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/Student.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/Teacher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Entities/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Enums/BeltColors.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Enums/Roles.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Class/ClassNotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/School/IsNotFromTheSameSchoolException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/School/SchoolExistsException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/School/SchoolNotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/User/RoleNotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/User/ThisEmailAlreadyExistsException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Exceptions/User/UserNotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Helpers/PasswordHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Interfaces/IClassRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Interfaces/ISchoolRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Interfaces/IStudentRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Interfaces/ITeacherRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Domain/Interfaces/IUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Data/BjjTrackerDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/ClassRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/SchoolRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/StudentRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/TeacherRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/UserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BjjTracker.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/AttendanceRequestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/AttendanceRequestController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,15 +37,20 @@
   </component>
   <component name="CopilotUserSelectedModel">
     <selectedModels>
+      <entry key="agent-panel" value="Claude Opus 4.6" />
       <entry key="edit-panel" value="GPT-4.1" />
-      <entry key="chat-panel" value="GPT-5.3-Codex" />
-      <entry key="agent-panel" value="GPT-5.3-Codex" />
+      <entry key="chat-panel" value="Claude Opus 4.6" />
     </selectedModels>
   </component>
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -151,6 +59,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/72f3b2328cb58fc95d3e64e0c4d29183542330a9f614c3f5f02efafd87f4619/SymmetricSecurityKey.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce37be1a06b16c6faa02038d2cc477dd3bca5b217ceeb41c5f2ad45c1bf9/ServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d65d8dd6af5669905bd6d55baa11d05965d2c35dab0553524c64dd0c775311d/EventDefinition`.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Controllers/AttendanceRequestController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Controllers/ClassController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -158,6 +67,11 @@
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Controllers/UserController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Extensions/ApplicationBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Extensions/ServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Models/AttendanceRequest/ApproveAttendanceModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Models/AttendanceRequest/DeleteAttendanceModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Models/AttendanceRequest/GetAttendenceRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Models/AttendanceRequest/RegisterAttendanceModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Models/AttendanceRequest/SearchAttendanceRequestsModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Models/Authentication/UserLoginViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Models/Authentication/UserRegisterViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Models/Class/GetClassByIdModel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -171,7 +85,14 @@
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/GraduateStudentModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Models/Teacher/UpdateTeacherNameModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Commands/Actions/ApproveAttendanceCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Commands/Actions/RegisterAttendanceCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Commands/AttendanceRequestCommandHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Commands/IAttendanceRequestCommandHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Queries/AttendanceRequestQueryHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Queries/Dtos/AttendanceRequestDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Queries/Filters/SearchAttendanceRequestFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Application/AttendanceRequest/Queries/IAttendanceRequestQueryHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Authentication/IJwtAuthenticationHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Authentication/JwtAuthenticationHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Class/Commands/Actions/RegisterClassCommand.cs" root0="FORCE_HIGHLIGHTING" />
@@ -183,7 +104,10 @@
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Class/Queries/Filters/SearchClassesFilter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Class/Queries/IClassQueryHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Common/Dtos/BaseUserDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Common/Dtos/LoginDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/Common/Dtos/PagedResponseDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Application/School/Commands/Actions/AddOwnerCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Application/School/Commands/Actions/RemoveOwnerCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/School/Commands/ISchoolCommandHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/School/Commands/SchoolCommandHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Application/School/Queries/Dtos/SchoolDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -215,31 +139,51 @@
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Entities/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Enums/BeltColors.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Enums/Roles.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/AttendanceRequest/AttendanceRequestNotFoundException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Class/ClassDateConflictException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Class/ClassNotFoundException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/School/IsNotFromTheSameSchoolException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/School/SchoolExistsException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Teacher/TeacherAlreadyOwnsThisSchoolException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/Teacher/TeacherOwnsAnotherSchoolException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/User/RoleNotFoundException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/User/ThisEmailAlreadyExistsException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/User/UserAlreadyOpenedARequestForThisClassException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Exceptions/User/UserNotFoundException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Helpers/PasswordHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Interfaces/IAttendanceRequestRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Interfaces/IClassRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Interfaces/ISchoolRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Interfaces/IStudentRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Interfaces/ITeacherRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Domain/Interfaces/IUserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/AttendanceRequestMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/ClassMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/SchoolMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/StudentMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/TeacherMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Data/Maps/UserMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/AttendanceRequestRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/ClassRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/SchoolRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/StudentRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/TeacherRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Infrastructure/Repositories/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="HttpClientEndpointsTabState">
+    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests /&gt;" />
+  </component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: true
 }</component>
   <component name="ProjectId" id="39AqBfN00sR0Fq9khRxJyFjGKiV" />
   <component name="ProjectViewState">
@@ -248,7 +192,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.BjjTracker_Api: https.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.BjjTracker_Api: https.executor&quot;: &quot;Debug&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Docker.compose.yaml: Compose Deployment.executor&quot;: &quot;Debug&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
@@ -260,7 +204,7 @@
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -439,8 +383,175 @@
       <workItem from="1776804275854" duration="3954000" />
       <workItem from="1776976907125" duration="1991000" />
       <workItem from="1777395358622" duration="138000" />
-      <workItem from="1777395626777" duration="328000" />
+      <workItem from="1777395626777" duration="5423000" />
+      <workItem from="1777466016084" duration="2947000" />
+      <workItem from="1777749632676" duration="1114000" />
+      <workItem from="1777750939412" duration="3698000" />
+      <workItem from="1777894455809" duration="45008000" />
+      <workItem from="1778071105590" duration="27000" />
+      <workItem from="1778257420712" duration="1447000" />
     </task>
+    <task id="LOCAL-00001" summary="Add initial project structure with domain, application, and infrastructure layers">
+      <option name="closed" value="true" />
+      <created>1777396246134</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1777396246134</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Implement error handling in ClassController and add ClassDateConflictException">
+      <option name="closed" value="true" />
+      <created>1777398955475</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1777398955475</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Implement error handling in SchoolController and add specific exceptions">
+      <option name="closed" value="true" />
+      <created>1777399481208</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1777399481209</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Refactor error handling in controllers to return exception messages and update model properties">
+      <option name="closed" value="true" />
+      <created>1777468049217</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1777468049217</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix logic in TeacherCommandHandler to throw exception for mismatched school entities">
+      <option name="closed" value="true" />
+      <created>1777749804664</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1777749804664</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Refactor ClassRepository to apply search term using a dedicated method">
+      <option name="closed" value="true" />
+      <created>1777896245875</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1777896245875</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Refactor TeacherCommandHandler to check school IDs for entity validation">
+      <option name="closed" value="true" />
+      <created>1777896807697</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1777896807697</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Improve error messages in TeacherCommandHandler for user not found exceptions">
+      <option name="closed" value="true" />
+      <created>1777897659783</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1777897659783</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add entity configurations for AttendanceRequest, Class, School, Student, Teacher, and User">
+      <option name="closed" value="true" />
+      <created>1777900776518</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1777900776518</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Refactor model properties to use init-only setters and improve validation checks">
+      <option name="closed" value="true" />
+      <created>1777905062675</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1777905062675</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Change response from Ok to Created in ClassController after successful command execution">
+      <option name="closed" value="true" />
+      <created>1777925910905</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1777925910905</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Remove unused ApproveAttendedRequest method and update entity configurations for Student and Teacher to correct table mappings">
+      <option name="closed" value="true" />
+      <created>1777980711640</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1777980711640</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add commands and models for attendance request management, including approval and deletion">
+      <option name="closed" value="true" />
+      <created>1777980768318</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1777980768318</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add authorization attributes to AttendanceRequest, Class, School, Student, and Teacher controllers">
+      <option name="closed" value="true" />
+      <created>1777981173785</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1777981173785</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add authorization policies to AttendanceRequest, Class, Student, and Teacher controllers">
+      <option name="closed" value="true" />
+      <created>1777985071208</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1777985071208</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Refactor AttendanceRequestController methods for improved readability by formatting parameters">
+      <option name="closed" value="true" />
+      <created>1777985241354</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1777985241354</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add SchoolOwners management and update related entities for improved functionality">
+      <option name="closed" value="true" />
+      <created>1777990885319</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1777990885319</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Remove unnecessary whitespace in TeacherDto.cs for cleaner code">
+      <option name="closed" value="true" />
+      <created>1777990935198</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1777990935198</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add commands and models for managing school owners with validation">
+      <option name="closed" value="true" />
+      <created>1777993158879</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1777993158879</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Add SchoolOwner role and update authorization policies for improved access control">
+      <option name="closed" value="true" />
+      <created>1778003907311</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1778003907311</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,6 +572,27 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Add initial project structure with domain, application, and infrastructure layers" />
+    <MESSAGE value="Implement error handling in ClassController and add ClassDateConflictException" />
+    <MESSAGE value="Implement error handling in SchoolController and add specific exceptions" />
+    <MESSAGE value="Refactor error handling in controllers to return exception messages and update model properties" />
+    <MESSAGE value="Fix logic in TeacherCommandHandler to throw exception for mismatched school entities" />
+    <MESSAGE value="Refactor ClassRepository to apply search term using a dedicated method" />
+    <MESSAGE value="Refactor TeacherCommandHandler to check school IDs for entity validation" />
+    <MESSAGE value="Improve error messages in TeacherCommandHandler for user not found exceptions" />
+    <MESSAGE value="Add entity configurations for AttendanceRequest, Class, School, Student, Teacher, and User" />
+    <MESSAGE value="Refactor model properties to use init-only setters and improve validation checks" />
+    <MESSAGE value="Change response from Ok to Created in ClassController after successful command execution" />
+    <MESSAGE value="Remove unused ApproveAttendedRequest method and update entity configurations for Student and Teacher to correct table mappings" />
+    <MESSAGE value="Add commands and models for attendance request management, including approval and deletion" />
+    <MESSAGE value="Add authorization attributes to AttendanceRequest, Class, School, Student, and Teacher controllers" />
+    <MESSAGE value="Add authorization policies to AttendanceRequest, Class, Student, and Teacher controllers" />
+    <MESSAGE value="Refactor AttendanceRequestController methods for improved readability by formatting parameters" />
+    <MESSAGE value="Add SchoolOwners management and update related entities for improved functionality" />
+    <MESSAGE value="Remove unnecessary whitespace in TeacherDto.cs for cleaner code" />
+    <MESSAGE value="Add commands and models for managing school owners with validation" />
+    <MESSAGE value="Add SchoolOwner role and update authorization policies for improved access control" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add SchoolOwner role and update authorization policies for improved access control" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -478,17 +610,17 @@
           <option name="timeStamp" value="3" />
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/BjjTracker.Application/Authentication/JwtAuthenticationHelper.cs</url>
-          <line>21</line>
-          <properties documentPath="$PROJECT_DIR$/BjjTracker.Application/Authentication/JwtAuthenticationHelper.cs" containingFunctionPresentation="Method 'GenerateJwtToken'">
+          <url>file://$PROJECT_DIR$/BjjTracker.Application/School/Commands/SchoolCommandHandler.cs</url>
+          <line>49</line>
+          <properties documentPath="$PROJECT_DIR$/BjjTracker.Application/School/Commands/SchoolCommandHandler.cs" containingFunctionPresentation="Method 'Handle'">
             <startOffsets>
-              <option value="713" />
+              <option value="2270" />
             </startOffsets>
             <endOffsets>
-              <option value="850" />
+              <option value="2360" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="10" />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

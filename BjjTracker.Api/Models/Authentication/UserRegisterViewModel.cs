@@ -16,10 +16,11 @@ public class UserRegisterViewModel
 
 	[Required]
 	[EnumDataType(typeof(Roles), ErrorMessage = "Invalid role value.")]
-	public int Role { get; set; } = 1;
+	public int Role { get; set; } = (int)Roles.Student;
 
 	public RegisterUserCommand GetCommand()
 	{
+		ArgumentOutOfRangeException.ThrowIfNegative(Role);
 		return new RegisterUserCommand(Email, Password, Role);
 	}
 }

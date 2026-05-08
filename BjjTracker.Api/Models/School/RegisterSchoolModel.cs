@@ -1,6 +1,5 @@
 using System.ComponentModel.DataAnnotations;
 using BjjTracker.Application.School.Commands.Actions;
-using BjjTracker.Domain.Entities;
 using DocumentValidator;
 
 namespace BjjTracker.Api.Models.School;
@@ -16,6 +15,8 @@ public class RegisterSchoolModel : IValidatableObject
 	[EmailAddress]
 	public required string ContactEmail { get; set; }
 	[Required]
+	public required List<int> Owners { get; set; }
+	[Required]
 	[Phone]
 	public string? ContactPhone { get; set; }
 	public List<int>? Teachers { get; set; }
@@ -27,6 +28,7 @@ public class RegisterSchoolModel : IValidatableObject
 			Name,
 			ContactEmail,
 			ContactPhone,
+			Owners,
 			Teachers,
 			Students);
 	}

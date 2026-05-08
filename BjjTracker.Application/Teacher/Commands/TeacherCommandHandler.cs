@@ -26,15 +26,15 @@ public class TeacherCommandHandler(ITeacherRepository teacherRepository, IStuden
 		ArgumentNullException.ThrowIfNull(request);
 		var student = await _studentRepository.GetByIdAsync(request.StudentId, cancellationToken);
 		if (student == null)
-			throw new UserNotFoundException(request.StudentId);
+			throw new UserNotFoundException("Student with id " + request.StudentId + " not found");
 		
 		var teacher = await _teacherRepository.GetByIdAsync(request.TeacherId,  cancellationToken);
 		if (teacher == null) 
-			throw new UserNotFoundException(request.TeacherId);
+			throw new UserNotFoundException("Teacher with id " + request.TeacherId + " not found");
 		
-		var bothEntitiesHasSchool = teacher.School != null && student.School != null;
+		var bothEntitiesHasSchool = teacher.SchoolId != null && student.SchoolId != null && teacher.SchoolId == student.SchoolId; 
 
-		if (bothEntitiesHasSchool)
+		if (!bothEntitiesHasSchool)
 			throw new IsNotFromTheSameSchoolException();
 		
 		teacher.GraduateStudent(student);

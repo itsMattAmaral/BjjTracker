@@ -3,4 +3,7 @@ using MediatR;
 
 namespace BjjTracker.Application.School.Commands;
 
-public interface ISchoolCommandHandler : IRequestHandler<RegisterSchoolCommand>;
+public interface ISchoolCommandHandler :
+	IRequestHandler<RegisterSchoolCommand>,
+	IRequestHandler<AddOwnerCommand>,
+	IRequestHandler<RemoveOwnerCommand>;

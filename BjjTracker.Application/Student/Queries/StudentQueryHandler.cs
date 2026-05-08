@@ -2,7 +2,6 @@ using BjjTracker.Application.Common.Dtos;
 using BjjTracker.Application.Student.Queries.Dtos;
 using BjjTracker.Application.Student.Queries.Filters;
 using BjjTracker.Domain.Exceptions.User;
-using BjjTracker.Domain.Helpers;
 using BjjTracker.Domain.Interfaces;
 
 namespace BjjTracker.Application.Student.Queries;

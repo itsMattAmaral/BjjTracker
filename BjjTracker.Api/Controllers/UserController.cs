@@ -1,4 +1,7 @@
+using System.Security.Authentication;
 using BjjTracker.Api.Models.Authentication;
+using BjjTracker.Application.Common.Dtos;
+using BjjTracker.Domain.Exceptions.User;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,11 +17,30 @@ public class UserController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status200OK)]
 	[ProducesResponseType(StatusCodes.Status400BadRequest)]
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
-	public async Task<IActionResult> Login([FromBody] UserLoginViewModel model)
+	public async Task<ActionResult<LoginDto>> Login([FromBody] UserLoginViewModel model)
 	{
 		var command = model.GetCommand();
-		var result = await _mediator.Send(command);
-		return Ok(result);
+
+		try
+		{
+			var result = await _mediator.Send(command);
+			return Ok(result);
+		}
+		catch (InvalidCredentialException ex)
+		{
+			if (ex.InnerException != null)
+				return BadRequest(ex.InnerException.Message);
+			
+			return BadRequest(ex.Message);
+		}
+		catch (Exception ex)
+		{
+			if (ex.InnerException != null)
+				return StatusCode(StatusCodes.Status500InternalServerError, ex.InnerException.Message);
+			
+			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+		}
+
 	}
 	
 	[HttpPost("register")]
@@ -28,7 +50,32 @@ public class UserController(IMediator mediator) : ControllerBase
 	public async Task<IActionResult> Register([FromBody] UserRegisterViewModel model)
 	{
 		var command = model.GetCommand();
-		await _mediator.Send(command);
-		return Created();
+
+		try
+		{
+			await _mediator.Send(command);
+			return Created();
+		}
+		catch (ThisEmailAlreadyExistsException ex)
+		{
+			if (ex.InnerException != null)
+				return BadRequest(ex.InnerException.Message);
+			
+			return BadRequest(ex.Message);
+		}
+		catch (RoleNotFoundException ex)
+		{
+			if (ex.InnerException != null)
+				return BadRequest(ex.InnerException.Message);
+			
+			return BadRequest(ex.Message);
+		}
+		catch (Exception ex)
+		{
+			if (ex.InnerException != null)
+				return StatusCode(StatusCodes.Status500InternalServerError, ex.InnerException.Message);
+			
+			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+		}
 	}
 }

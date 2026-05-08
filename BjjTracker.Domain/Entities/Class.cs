@@ -24,15 +24,6 @@ public class Class
 		AttendanceRequests.Remove(attendanceRequest);
 		UpdatedAt = DateTime.UtcNow;
 	}
-
-	public void ApproveAttendedRequest(int studentId)
-	{
-		var request = AttendanceRequests.FirstOrDefault(r => r.StudentId == studentId);
-		if (request is null) return;
-
-		request.Attended = true;
-		UpdatedAt = DateTime.UtcNow;
-	}
 	
 	public void SetClassDates(DateTime beginDate, DateTime endDate)
 	{

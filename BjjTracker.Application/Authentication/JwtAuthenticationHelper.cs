@@ -19,6 +19,9 @@ public class JwtAuthenticationHelper(IConfiguration configuration) : IJwtAuthent
 			new (ClaimTypes.Role, user.Role.ToString())
 		};
 		
+		if (user is Domain.Entities.Teacher { IsSchoolOwner: true })
+			claims.Add(new Claim(ClaimTypes.Role, "SchoolOwner"));
+		
 		var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(_configuration["ApplicationSettings:JWT_Secret"] ?? string.Empty));
 		var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 		var jwtToken = new JwtSecurityToken

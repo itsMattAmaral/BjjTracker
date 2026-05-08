@@ -33,11 +33,21 @@ namespace BjjTracker.Infrastructure.Migrations
                     b.Property<bool>("Attended")
                         .HasColumnType("boolean");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
                     b.HasKey("ClassId", "StudentId");
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("AttendanceRequest");
+                    b.ToTable("AttendanceRequests", (string)null);
                 });
 
             modelBuilder.Entity("BjjTracker.Domain.Entities.Class", b =>
@@ -76,7 +86,7 @@ namespace BjjTracker.Infrastructure.Migrations
 
                     b.HasIndex("TeacherId");
 
-                    b.ToTable("Classes");
+                    b.ToTable("Classes", (string)null);
                 });
 
             modelBuilder.Entity("BjjTracker.Domain.Entities.School", b =>
@@ -121,7 +131,7 @@ namespace BjjTracker.Infrastructure.Migrations
                     b.HasIndex("Document")
                         .IsUnique();
 
-                    b.ToTable("Schools");
+                    b.ToTable("Schools", (string)null);
                 });
 
             modelBuilder.Entity("BjjTracker.Domain.Entities.User", b =>
@@ -178,7 +188,7 @@ namespace BjjTracker.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
 
                     b.HasDiscriminator<int>("Role");
 
@@ -202,9 +212,16 @@ namespace BjjTracker.Infrastructure.Migrations
                     b.HasBaseType("BjjTracker.Domain.Entities.User");
 
                     b.Property<bool>("IsSchoolOwner")
-                        .HasColumnType("boolean");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false);
+
+                    b.Property<int?>("SchoolOwnedId")
+                        .HasColumnType("integer");
 
                     b.HasIndex("SchoolId");
+
+                    b.HasIndex("SchoolOwnedId");
 
                     b.HasDiscriminator().HasValue(0);
                 });
@@ -262,7 +279,14 @@ namespace BjjTracker.Infrastructure.Migrations
                         .WithMany("Teachers")
                         .HasForeignKey("SchoolId");
 
+                    b.HasOne("BjjTracker.Domain.Entities.School", "SchoolOwned")
+                        .WithMany("Owners")
+                        .HasForeignKey("SchoolOwnedId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
                     b.Navigation("School");
+
+                    b.Navigation("SchoolOwned");
                 });
 
             modelBuilder.Entity("BjjTracker.Domain.Entities.Class", b =>
@@ -273,6 +297,8 @@ namespace BjjTracker.Infrastructure.Migrations
             modelBuilder.Entity("BjjTracker.Domain.Entities.School", b =>
                 {
                     b.Navigation("Classes");
+
+                    b.Navigation("Owners");
 
                     b.Navigation("Students");
 

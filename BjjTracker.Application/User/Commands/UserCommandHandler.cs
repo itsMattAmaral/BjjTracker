@@ -1,5 +1,6 @@
 using System.Security.Authentication;
 using BjjTracker.Application.Authentication;
+using BjjTracker.Application.Common.Dtos;
 using BjjTracker.Application.User.Commands.Actions;
 using BjjTracker.Domain.Enums;
 using BjjTracker.Domain.Exceptions.User;
@@ -11,7 +12,7 @@ namespace BjjTracker.Application.User.Commands;
 
 public class UserCommandHandler(IUserRepository userRepository, IJwtAuthenticationHelper jwtAuthenticationHelper) :
 	IRequestHandler<RegisterUserCommand>,
-	IRequestHandler<LoginUserCommand, string>
+	IRequestHandler<LoginUserCommand, LoginDto>
 {
 	private readonly IUserRepository _userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
 	private readonly IJwtAuthenticationHelper _jwtAuthenticationHelper = jwtAuthenticationHelper ?? throw new ArgumentNullException(nameof(jwtAuthenticationHelper));
@@ -57,7 +58,7 @@ public class UserCommandHandler(IUserRepository userRepository, IJwtAuthenticati
 
 	}
 
-	public async Task<string> Handle(LoginUserCommand request, CancellationToken cancellationToken)
+	public async Task<LoginDto> Handle(LoginUserCommand request, CancellationToken cancellationToken)
 	{
 		try
 		{
@@ -71,8 +72,9 @@ public class UserCommandHandler(IUserRepository userRepository, IJwtAuthenticati
 
 			var isPasswordValid = PasswordHandler.VerifyPassword(request.Password, hashPassword);
 			if (!isPasswordValid) throw new InvalidCredentialException();
-			
-			return _jwtAuthenticationHelper.GenerateJwtToken(foundUser);
+			var token = _jwtAuthenticationHelper.GenerateJwtToken(foundUser);
+
+			return new LoginDto { Token = token, Role = foundUser.Role.ToString() };
 		}
 		catch (InvalidCredentialException)
 		{
