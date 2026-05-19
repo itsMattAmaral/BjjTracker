@@ -28,25 +28,7 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-    command: >
-      bash -c "
-        dotnet tool install --global dotnet-ef --version 9.* &&
-        export PATH=\"$$PATH:/root/.dotnet/tools\" &&
-        MIGRATION_FILES=$$(ls BjjTracker.Infrastructure/Migrations/*.cs 2>/dev/null | grep -v ModelSnapshot | wc -l) &&
-        if [ \"$$MIGRATION_FILES\" -eq 0 ]; then
-          echo '>>> No migrations found, creating InitialMigration...' &&
-          dotnet ef migrations add InitialMigration \
-            --project BjjTracker.Infrastructure \
-            --startup-project BjjTracker.Api
-        else
-          echo '>>> Migrations already exist, skipping creation.'
-        fi &&
-        echo '>>> Applying migrations...' &&
-        dotnet ef database update \
-          --project BjjTracker.Infrastructure \
-          --startup-project BjjTracker.Api &&
-        echo '>>> Done.'
-      "
+    entrypoint: ["/bin/bash", "/src/migrate.sh"]
 
   bjjtracker_api:
     image: bjjtracker_api

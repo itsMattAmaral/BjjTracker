@@ -20,12 +20,37 @@
   <component name="ChangeListManager">
     <list default="true" id="8b1779c8-03b1-47be-a624-cb58d1e7e610" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/AttendanceRequestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/AttendanceRequestController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotChats">
+    <option name="panelChat">
+      <chat>
+        <option name="activeSessionId" value="967f77ef-961b-4aeb-90df-517a27855875" />
+        <option name="sessions">
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="c4423f95-43ff-4dac-b41f-29f5c502ffca" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-sonnet-4.6" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="967f77ef-961b-4aeb-90df-517a27855875" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="claude-sonnet-4.6" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+        </option>
+        <option name="type" value="PANEL" />
+      </chat>
+    </option>
   </component>
   <component name="CopilotPersistence">
     <persistenceIdMap>
@@ -53,6 +78,15 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:itsMattAmaral/BjjTracker.git&quot;,
+    &quot;accountId&quot;: &quot;fd66f7de-aaca-4a48-bd84-9e4845a26ac1&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7e5ec405cc4e4af09b7c741272ac01012fe00/56/10263823/Queryable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/27fd9ceb5e43bafe5193aff7d5431b4f6d6784a1b7c9988a16f4fee508b/AuthenticationHandlerProvider.cs" root0="FORCE_HIGHLIGHTING" />
@@ -389,7 +423,8 @@
       <workItem from="1777750939412" duration="3698000" />
       <workItem from="1777894455809" duration="45008000" />
       <workItem from="1778071105590" duration="27000" />
-      <workItem from="1778257420712" duration="1447000" />
+      <workItem from="1778257420712" duration="2166000" />
+      <workItem from="1779209792041" duration="1404000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with domain, application, and infrastructure layers">
       <option name="closed" value="true" />
@@ -551,7 +586,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778003907311</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Update AttendanceRequestController authorization policy for simplified access control">
+      <option name="closed" value="true" />
+      <created>1778261635883</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1778261635883</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +635,8 @@
     <MESSAGE value="Remove unnecessary whitespace in TeacherDto.cs for cleaner code" />
     <MESSAGE value="Add commands and models for managing school owners with validation" />
     <MESSAGE value="Add SchoolOwner role and update authorization policies for improved access control" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add SchoolOwner role and update authorization policies for improved access control" />
+    <MESSAGE value="Update AttendanceRequestController authorization policy for simplified access control" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update AttendanceRequestController authorization policy for simplified access control" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
