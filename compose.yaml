@@ -1,4 +1,4 @@
-﻿services:
+services:
   postgres:
     image: postgres:16
     container_name: BjjTracker.Postgres
@@ -11,6 +11,43 @@
       POSTGRES_DB: ${POSTGRES_DB}
     volumes:
       - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  migrator:
+    image: mcr.microsoft.com/dotnet/sdk:9.0
+    container_name: BjjTracker.Migrator
+    working_dir: /src
+    volumes:
+      - .:/src
+    environment:
+      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=${POSTGRES_DB};Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: >
+      bash -c "
+        dotnet tool install --global dotnet-ef --version 9.* &&
+        export PATH=\"$$PATH:/root/.dotnet/tools\" &&
+        MIGRATION_FILES=$$(ls BjjTracker.Infrastructure/Migrations/*.cs 2>/dev/null | grep -v ModelSnapshot | wc -l) &&
+        if [ \"$$MIGRATION_FILES\" -eq 0 ]; then
+          echo '>>> No migrations found, creating InitialMigration...' &&
+          dotnet ef migrations add InitialMigration \
+            --project BjjTracker.Infrastructure \
+            --startup-project BjjTracker.Api
+        else
+          echo '>>> Migrations already exist, skipping creation.'
+        fi &&
+        echo '>>> Applying migrations...' &&
+        dotnet ef database update \
+          --project BjjTracker.Infrastructure \
+          --startup-project BjjTracker.Api &&
+        echo '>>> Done.'
+      "
+
   bjjtracker_api:
     image: bjjtracker_api
     build:
@@ -21,11 +58,13 @@
     ports:
       - "5001:8080"
     depends_on:
-      - postgres
+      migrator:
+        condition: service_completed_successfully
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
       ASPNETCORE_URLS: "http://+:8080"
       ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=${POSTGRES_DB};Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}"
       applicationSettings__JWT_Secret: ${JWT_SECRET}
+
 volumes:
   pgdata:
