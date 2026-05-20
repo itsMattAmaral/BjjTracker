@@ -425,6 +425,9 @@
       <workItem from="1778071105590" duration="27000" />
       <workItem from="1778257420712" duration="2166000" />
       <workItem from="1779209792041" duration="1404000" />
+      <workItem from="1779234332042" duration="259000" />
+      <workItem from="1779234595781" duration="22000" />
+      <workItem from="1779235292857" duration="658000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with domain, application, and infrastructure layers">
       <option name="closed" value="true" />
@@ -594,7 +597,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778261635883</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Refactor docker-compose setup to use migrate.sh for database migrations">
+      <option name="closed" value="true" />
+      <created>1779234463674</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1779234463674</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add migrate.sh script for automated database migrations">
+      <option name="closed" value="true" />
+      <created>1779234477938</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1779234477938</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -636,7 +655,9 @@
     <MESSAGE value="Add commands and models for managing school owners with validation" />
     <MESSAGE value="Add SchoolOwner role and update authorization policies for improved access control" />
     <MESSAGE value="Update AttendanceRequestController authorization policy for simplified access control" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update AttendanceRequestController authorization policy for simplified access control" />
+    <MESSAGE value="Refactor docker-compose setup to use migrate.sh for database migrations" />
+    <MESSAGE value="Add migrate.sh script for automated database migrations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add migrate.sh script for automated database migrations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

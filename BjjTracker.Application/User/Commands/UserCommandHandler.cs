@@ -68,9 +68,7 @@ public class UserCommandHandler(IUserRepository userRepository, IJwtAuthenticati
 			var foundUser = await _userRepository.GetByEmailAsync(request.Email,  cancellationToken);
 			if (foundUser is null) throw new InvalidCredentialException();
 
-			var hashPassword = PasswordHandler.HashPassword(request.Password);
-
-			var isPasswordValid = PasswordHandler.VerifyPassword(request.Password, hashPassword);
+			var isPasswordValid = PasswordHandler.VerifyPassword(request.Password, foundUser.Password);
 			if (!isPasswordValid) throw new InvalidCredentialException();
 			var token = _jwtAuthenticationHelper.GenerateJwtToken(foundUser);
 
