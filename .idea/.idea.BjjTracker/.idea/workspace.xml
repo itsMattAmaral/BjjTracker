@@ -19,7 +19,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b1779c8-03b1-47be-a624-cb58d1e7e610" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BjjTracker.Api/Middleware/GlobalExpectionHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BjjTracker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/AttendanceRequestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/AttendanceRequestController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/ClassController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/ClassController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/SchoolController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/StudentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/TeacherController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ApplicationBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ApplicationBuilderExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BjjTracker.Api/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,9 +80,22 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/dev" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,6 +107,16 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;git@github.com:itsMattAmaral/BjjTracker.git&quot;,
     &quot;accountId&quot;: &quot;fd66f7de-aaca-4a48-bd84-9e4845a26ac1&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;itsMattAmaral&quot;,
+    &quot;repository&quot;: &quot;BjjTracker&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -101,6 +133,7 @@
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Controllers/UserController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Extensions/ApplicationBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Extensions/ServiceCollectionExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Middleware/GlobalExpectionHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Models/AttendanceRequest/ApproveAttendanceModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Models/AttendanceRequest/DeleteAttendanceModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BjjTracker.Api/Models/AttendanceRequest/GetAttendenceRequest.cs" root0="FORCE_HIGHLIGHTING" />
@@ -224,36 +257,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.BjjTracker_Api: https.executor&quot;: &quot;Debug&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Docker.compose.yaml: Compose Deployment.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.BjjTracker_Api: https.executor": "Debug",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Docker.compose.yaml: Compose Deployment.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "dev",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;,
-      &quot;sqlserver.localdb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql",
+      "sqlserver.localdb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.BjjTracker_Api: https">
     <configuration name="BjjTracker.Infrastructure" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -427,7 +460,8 @@
       <workItem from="1779209792041" duration="1404000" />
       <workItem from="1779234332042" duration="259000" />
       <workItem from="1779234595781" duration="22000" />
-      <workItem from="1779235292857" duration="658000" />
+      <workItem from="1779235292857" duration="1262000" />
+      <workItem from="1779275168350" duration="2037000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with domain, application, and infrastructure layers">
       <option name="closed" value="true" />
@@ -613,7 +647,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779234477938</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Fix password verification logic in UserCommandHandler">
+      <option name="closed" value="true" />
+      <created>1779236503127</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1779236503127</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,7 +699,8 @@
     <MESSAGE value="Update AttendanceRequestController authorization policy for simplified access control" />
     <MESSAGE value="Refactor docker-compose setup to use migrate.sh for database migrations" />
     <MESSAGE value="Add migrate.sh script for automated database migrations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add migrate.sh script for automated database migrations" />
+    <MESSAGE value="Fix password verification logic in UserCommandHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix password verification logic in UserCommandHandler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

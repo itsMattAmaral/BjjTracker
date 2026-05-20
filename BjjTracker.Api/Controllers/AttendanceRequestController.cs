@@ -1,9 +1,6 @@
 using BjjTracker.Api.Models.AttendanceRequest;
 using BjjTracker.Application.AttendanceRequest.Queries.Dtos;
 using BjjTracker.Application.Common.Dtos;
-using BjjTracker.Domain.Exceptions.AttendanceRequest;
-using BjjTracker.Domain.Exceptions.Class;
-using BjjTracker.Domain.Exceptions.User;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -26,16 +23,8 @@ public class AttendanceRequestController(IMediator mediator) : ControllerBase
 	public async Task<ActionResult<PagedResponseDto<AttendanceRequestDto>>> SearchAttendanceRequests(
 		[FromQuery] SearchAttendanceRequestsModel model, CancellationToken cancellationToken = default)
 	{
-		var query = model.GetFilter();
-		try
-		{
-			var  result = await _mediator.Send(query, cancellationToken);
-			return Ok(result);
-		}
-		catch (Exception ex)
-		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-		}
+		var  result = await _mediator.Send(model.GetFilter(), cancellationToken);
+		return Ok(result);
 	}
 	
 	[HttpGet("/byClassId/{classId:int}")]
@@ -47,16 +36,8 @@ public class AttendanceRequestController(IMediator mediator) : ControllerBase
 		[FromRoute] int classId, CancellationToken cancellationToken = default)
 	{
 		var model = new GetAttendancesByClassIdModel { ClassId = classId };
-		var query = model.GetFilter();
-		try
-		{
-			var result = await _mediator.Send(query, cancellationToken);
-			return Ok(result);
-		}
-		catch (Exception ex)
-		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-		}
+		var  result = await _mediator.Send(model.GetFilter(), cancellationToken);
+		return Ok(result);
 	}
 	
 	[HttpGet("/byStudentId/{studentId:int}")]
@@ -68,16 +49,8 @@ public class AttendanceRequestController(IMediator mediator) : ControllerBase
 		[FromRoute] int studentId, CancellationToken cancellationToken = default)
 	{
 		var model = new GetAttendancesByStudentIdModel { StudentId = studentId };
-		var query = model.GetFilter();
-		try
-		{
-			var result = await _mediator.Send(query, cancellationToken);
-			return Ok(result);
-		}
-		catch (Exception ex)
-		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-		}
+		var  result = await _mediator.Send(model.GetFilter(), cancellationToken);
+		return Ok(result);
 	}
 	
 	[HttpGet("/byClassId/{classId:int}/byStudentId/{studentId:int}")]
@@ -89,20 +62,8 @@ public class AttendanceRequestController(IMediator mediator) : ControllerBase
 		[FromRoute] int classId, [FromRoute] int studentId, CancellationToken cancellationToken = default)
 	{
 		var model = new GetAttendenceRequest { ClassId = classId, StudentId = studentId };
-		var query = model.GetFilter();
-		try
-		{
-			var result = await _mediator.Send(query, cancellationToken);
-			return Ok(result);
-		}
-		catch (AttendanceRequestNotFoundException ex)
-		{
-			return NotFound(ex.Message);
-		}
-		catch (Exception ex)
-		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-		}
+		var  result = await _mediator.Send(model.GetFilter(), cancellationToken);
+		return Ok(result);
 	}
 	
 	[HttpPost]
@@ -113,29 +74,8 @@ public class AttendanceRequestController(IMediator mediator) : ControllerBase
 	public async Task<ActionResult> RegisterAttendanceRequest(
 		[FromBody] RegisterAttendanceModel model, CancellationToken cancellationToken)
 	{
-		var command = model.GetCommand();
-
-		try
-		{
-			await _mediator.Send(command, cancellationToken);
-			return Created();
-		}
-		catch (UserNotFoundException ex)
-		{
-			return NotFound(ex.Message);
-		}
-		catch (ClassNotFoundException ex)
-		{
-			return NotFound(ex.Message);
-		}
-		catch (UserAlreadyOpenedARequestForThisClassException ex)
-		{
-			return BadRequest(ex.Message);
-		}
-		catch (Exception ex)
-		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-		}
+		await _mediator.Send(model.GetCommand(), cancellationToken);
+		return Created();
 	}
 
 	[HttpPatch("Approve")]
@@ -147,25 +87,8 @@ public class AttendanceRequestController(IMediator mediator) : ControllerBase
 	public async Task<ActionResult> ApproveAttendanceRequest(
 		[FromBody] ApproveAttendanceModel model, CancellationToken cancellationToken)
 	{
-		var command = model.GetCommand();
-
-		try
-		{
-			await _mediator.Send(command, cancellationToken);
-			return NoContent();
-		}
-		catch (UserNotFoundException ex)
-		{
-			return NotFound(ex.Message);
-		}
-		catch (AttendanceRequestNotFoundException ex)
-		{
-			return NotFound(ex.Message);
-		}
-		catch (Exception ex)
-		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-		}
+		await _mediator.Send(model.GetCommand(), cancellationToken);
+		return NoContent();
 	}
 	
 	[HttpDelete]
@@ -176,20 +99,7 @@ public class AttendanceRequestController(IMediator mediator) : ControllerBase
 	public async Task<ActionResult> DeleteAttendanceRequest(
 		[FromBody] DeleteAttendanceModel model, CancellationToken cancellationToken)
 	{
-		var command = model.GetCommand();
-
-		try
-		{
-			await _mediator.Send(command, cancellationToken);
-			return NoContent();
-		}
-		catch (AttendanceRequestNotFoundException ex)
-		{
-			return NotFound(ex.Message);
-		}
-		catch (Exception ex)
-		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-		}
+		await _mediator.Send(model.GetCommand(), cancellationToken);
+		return NoContent();
 	}
 }

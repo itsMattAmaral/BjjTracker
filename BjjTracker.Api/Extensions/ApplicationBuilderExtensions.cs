@@ -4,6 +4,8 @@ public static class ApplicationBuilderExtensions
 {
 	public static WebApplication ConfigurePipeline(this WebApplication app, IHostEnvironment env)
 	{
+		app.UseExceptionHandler();
+		
 		if (env.IsDevelopment())
 		{
 			app.UseSwagger();

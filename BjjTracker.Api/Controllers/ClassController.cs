@@ -1,7 +1,6 @@
 using BjjTracker.Api.Models.Class;
 using BjjTracker.Application.Class.Queries.Dtos;
 using BjjTracker.Application.Common.Dtos;
-using BjjTracker.Domain.Exceptions.Class;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -21,17 +20,8 @@ public class ClassController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
 	public async Task<ActionResult<PagedResponseDto<ClassDto>>> SearchClasses(SearchClassesModel model, CancellationToken cancellationToken =  default)
 	{
-		var query = model.GetFilter();
-
-		try
-		{
-			var result = await _mediator.Send(query, cancellationToken);
-			return Ok(result);
-		}
-		catch (Exception ex)
-		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-		}
+		var result = await _mediator.Send(model.GetFilter(), cancellationToken);
+		return Ok(result);
 	}
 	
 	[HttpGet("{classId:int}")]
@@ -41,21 +31,8 @@ public class ClassController(IMediator mediator) : ControllerBase
 	public async Task<ActionResult<ClassDto>> GetSchoolById([FromRoute]int classId, CancellationToken cancellationToken)
 	{
 		var model = new GetClassByIdModel{ ClassId = classId };
-		var query = model.GetFilter();
-
-		try
-		{
-			var result = await _mediator.Send(query, cancellationToken);
-			return Ok(result);
-		}
-		catch (ClassNotFoundException ex)
-		{
-			return NotFound(ex.Message);
-		}
-		catch (Exception ex)
-		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-		}
+		var result = await _mediator.Send(model.GetFilter(), cancellationToken);
+		return Ok(result);
 	}
 
 	[HttpPost]
@@ -65,20 +42,7 @@ public class ClassController(IMediator mediator) : ControllerBase
 	public async Task<IActionResult> RegisterClass([FromBody] RegisterClassModel model, CancellationToken cancellationToken)
 	{
 		model.ValidateDates();
-		var command = model.GetCommand();
-
-		try
-		{
-			await _mediator.Send(command, cancellationToken);
-			return Created();
-		}
-		catch (ClassDateConflictException ex)
-		{
-			return BadRequest(ex.Message);
-		}
-		catch (Exception ex)
-		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-		}
+		await _mediator.Send(model.GetCommand(), cancellationToken);
+		return Created();
 	}
 }
