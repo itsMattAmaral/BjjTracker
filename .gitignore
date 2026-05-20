@@ -3,4 +3,5 @@ obj/
 /packages/
 riderModule.iml
 .env
+.idea
 /_ReSharper.Caches/

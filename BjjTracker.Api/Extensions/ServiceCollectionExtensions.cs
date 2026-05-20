@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using System.Text;
+using BjjTracker.Api.Middleware;
 using BjjTracker.Application.Authentication;
 using BjjTracker.Domain.Interfaces;
 using BjjTracker.Infrastructure.Data;
@@ -21,6 +22,8 @@ public static class ServiceCollectionExtensions
 		services.AddDbContext<BjjTrackerDbContext>(options => options.UseNpgsql(connectionString, optionsBuilder => optionsBuilder.MigrationsAssembly("BjjTracker.Infrastructure").MigrationsHistoryTable("__EFMigrationsHistory", "public")));
 		services.AddControllers();
 		services.AddEndpointsApiExplorer();
+		services.AddExceptionHandler<GlobalExpectionHandler>();
+		services.AddProblemDetails();
 		
 		return services;
 	}

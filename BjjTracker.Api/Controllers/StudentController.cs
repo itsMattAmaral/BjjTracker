@@ -27,18 +27,8 @@ public class StudentController(IMediator mediator) : ControllerBase
 		SearchStudentsModel model,
 		CancellationToken cancellationToken = default)
 	{
-		var query = model.GetFilter();
-
-		try
-		{
-			var result = await _mediator.Send(query, cancellationToken);
-			return Ok(result);
-		}
-		catch (Exception ex)
-		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-		}
-
+		var result = await _mediator.Send(model.GetFilter(), cancellationToken);
+		return Ok(result);
 	}
 	
 	[HttpGet("{studentId:int}")]
@@ -48,21 +38,8 @@ public class StudentController(IMediator mediator) : ControllerBase
 	public async Task<ActionResult<StudentDto>> GetStudentById([FromRoute] int studentId, CancellationToken cancellationToken = default)
 	{
 		var model = new GetStudentByIdModel { StudentId = studentId };
-		var query = model.GetFilter();
-
-		try
-		{
-			var result = await _mediator.Send(query,  cancellationToken);
-			return Ok(result);
-		}
-		catch (UserNotFoundException ex)
-		{
-			return NotFound(ex.Message);
-		}
-		catch (Exception ex)
-		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-		}
+		var result = await _mediator.Send(model.GetFilter(), cancellationToken);
+		return Ok(result);
 
 	}
 	
@@ -74,25 +51,8 @@ public class StudentController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
 	public async Task<IActionResult> UpdateStudentSchoolId([FromRoute]int studentId, [FromBody]UpdateStudentSchoolIdModel model, CancellationToken cancellationToken = default)
 	{
-		var command = model.GetCommand(studentId);
-
-		try
-		{
-			await _mediator.Send(command, cancellationToken);
-			return NoContent();
-		}		
-		catch (UserNotFoundException ex)
-		{
-			return NotFound(ex.Message);
-		}
-		catch (SchoolNotFoundException ex)
-		{
-			return NotFound(ex.Message);
-		}
-		catch (Exception ex)
-		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-		}
+		await _mediator.Send(model.GetCommand(studentId), cancellationToken);
+		return NoContent();
 	}
 	
 	[Authorize(Policy = "StudentOnly")]
@@ -103,20 +63,7 @@ public class StudentController(IMediator mediator) : ControllerBase
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
 	public async Task<IActionResult> UpdateStudentNameId([FromRoute]int studentId, [FromBody]UpdateStudentNameModel model, CancellationToken cancellationToken = default)
 	{
-		var command = model.GetCommand(studentId);
-
-		try
-		{
-			await _mediator.Send(command, cancellationToken);
-			return NoContent();
-		}
-		catch (UserNotFoundException ex)
-		{
-			return NotFound(ex.Message);
-		}
-		catch (Exception ex)
-		{
-			return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-		}
+		await _mediator.Send(model.GetCommand(studentId), cancellationToken);
+		return NoContent();
 	}
 }
